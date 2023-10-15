@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{235315D4-A330-23CC-EB68-775E28D57EAF}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/LaunchButtonControl.cs">
+    <Files>
+      <File FileName="Assets/Scenes/TCPConnection.cs" Line="102" Column="54" />
+      <File FileName="Assets/Scenes/MainControl.cs" Line="3" Column="19" />
+      <File FileName="Assets/Scenes/LaunchButtonControl.cs" Line="6" Column="30" />
+      <File FileName="Assets/Scenes/Configuration.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scenes/CanvasControl.cs" Line="172" Column="111" />
+      <File FileName="Assets/Scenes/TouchHandler.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9ce911e5-eb62-47e2-9a20-584a477a10aa" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

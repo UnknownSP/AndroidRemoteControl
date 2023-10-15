@@ -1,0 +1,25 @@
+# List of SDK dependencies of this app, this information is also included in an encrypted form in the APK.
+# For more information visit: https://d.android.com/r/tools/dependency-metadata
+
+library {
+  maven_library {
+    artifactId: "libwebrtc"
+  }
+  digests {
+    sha256: "O5\006k\336\243\031\nw%*H\232\346i\032P3\023\227\v\236\220\0377\320\272+\267=\272t"
+  }
+}
+library {
+  digests {
+    sha256: "\020\220\\\3618\006,M8\333%\355\334\310\311q\302\017C[\220.\227\376\364\312V\275\3006\177\177"
+  }
+}
+library_dependencies {
+}
+library_dependencies {
+  library_index: 1
+}
+module_dependencies {
+  module_name: "base"
+  dependency_index: 1
+}
