@@ -3266,6 +3266,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ScriptableObject_CreateScriptableObject();
 		Register_UnityEngine_ScriptableObject_CreateScriptableObject();
 
+		//UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromName(System.String)
+		void Register_UnityEngine_ScriptableObject_CreateScriptableObjectInstanceFromName();
+		Register_UnityEngine_ScriptableObject_CreateScriptableObjectInstanceFromName();
+
 		//UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromType(System.Type,System.Boolean)
 		void Register_UnityEngine_ScriptableObject_CreateScriptableObjectInstanceFromType();
 		Register_UnityEngine_ScriptableObject_CreateScriptableObjectInstanceFromType();

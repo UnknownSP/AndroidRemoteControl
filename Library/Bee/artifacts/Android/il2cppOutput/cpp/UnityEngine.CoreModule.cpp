@@ -7741,6 +7741,8 @@ inline void KeyValuePair_2__ctor_mAB9B11258369847D02D8A4600F3F4518BE09B822 (KeyV
 }
 // System.Void UnityEngine.ScriptableObject::CreateScriptableObject(UnityEngine.ScriptableObject)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject_CreateScriptableObject_m63730D18415FC4EC61F77C57A4D184064E82D2C0 (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ___0_self, const RuntimeMethod* method) ;
+// UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromName(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ScriptableObject_CreateScriptableObjectInstanceFromName_mA2B04F28F081311DD2A89A6E19473D564F18439C (String_t* ___0_className, const RuntimeMethod* method) ;
 // UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromType(System.Type,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ScriptableObject_CreateScriptableObjectInstanceFromType_mDA90002F7BB98734237184C1E160C7763B5A0AD6 (Type_t* ___0_type, bool ___1_applyDefaultsAndReset, const RuntimeMethod* method) ;
 // System.String System.String::Replace(System.String,System.String)
@@ -30357,6 +30359,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295E
 		return;
 	}
 }
+// UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateInstance(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ScriptableObject_CreateInstance_m665B20BF660DA7CC22E9B316B51F5B980BC491B2 (String_t* ___0_className, const RuntimeMethod* method) 
+{
+	ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* V_0 = NULL;
+	{
+		String_t* L_0 = ___0_className;
+		ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* L_1;
+		L_1 = ScriptableObject_CreateScriptableObjectInstanceFromName_mA2B04F28F081311DD2A89A6E19473D564F18439C(L_0, NULL);
+		V_0 = L_1;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* L_2 = V_0;
+		return L_2;
+	}
+}
 // UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateInstance(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ScriptableObject_CreateInstance_mE015043D7EC19654FDFB830A9393B3914FF5FC24 (Type_t* ___0_type, const RuntimeMethod* method) 
 {
@@ -30383,6 +30403,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject_CreateScriptableObject_
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (ScriptableObject_CreateScriptableObject_m63730D18415FC4EC61F77C57A4D184064E82D2C0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ScriptableObject::CreateScriptableObject(UnityEngine.ScriptableObject)");
 	_il2cpp_icall_func(___0_self);
+}
+// UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromName(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ScriptableObject_CreateScriptableObjectInstanceFromName_mA2B04F28F081311DD2A89A6E19473D564F18439C (String_t* ___0_className, const RuntimeMethod* method) 
+{
+	typedef ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* (*ScriptableObject_CreateScriptableObjectInstanceFromName_mA2B04F28F081311DD2A89A6E19473D564F18439C_ftn) (String_t*);
+	static ScriptableObject_CreateScriptableObjectInstanceFromName_mA2B04F28F081311DD2A89A6E19473D564F18439C_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (ScriptableObject_CreateScriptableObjectInstanceFromName_mA2B04F28F081311DD2A89A6E19473D564F18439C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromName(System.String)");
+	ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* icallRetVal = _il2cpp_icall_func(___0_className);
+	return icallRetVal;
 }
 // UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromType(System.Type,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ScriptableObject_CreateScriptableObjectInstanceFromType_mDA90002F7BB98734237184C1E160C7763B5A0AD6 (Type_t* ___0_type, bool ___1_applyDefaultsAndReset, const RuntimeMethod* method) 
@@ -34475,6 +34505,46 @@ IL2CPP_EXTERN_C  float Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9
 	float _returnValue;
 	_returnValue = Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline(_thisAdjusted, method);
 	return _returnValue;
+}
+// System.Single UnityEngine.Vector2::Distance(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Vector2_Distance_mBACBB1609E1894D68F882D86A93519E311810C89 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_a;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___1_b;
+		float L_3 = L_2.___x_0;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___0_a;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___1_b;
+		float L_7 = L_6.___y_1;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		float L_8 = V_0;
+		float L_9 = V_0;
+		float L_10 = V_1;
+		float L_11 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_12;
+		L_12 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_8, L_9)), ((float)il2cpp_codegen_multiply(L_10, L_11))))));
+		V_2 = ((float)L_12);
+		goto IL_002e;
+	}
+
+IL_002e:
+	{
+		float L_13 = V_2;
+		return L_13;
+	}
 }
 // UnityEngine.Vector2 UnityEngine.Vector2::ClampMagnitude(UnityEngine.Vector2,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_ClampMagnitude_m9BF093877BD11282C41088022FE4AE70A3A0ECA9 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_vector, float ___1_maxLength, const RuntimeMethod* method) 

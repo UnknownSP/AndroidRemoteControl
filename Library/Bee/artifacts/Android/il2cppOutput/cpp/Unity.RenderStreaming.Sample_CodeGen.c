@@ -342,14 +342,14 @@ extern void ReceiverSample_OnStart_mC218F38D4EA728DD19B70A1FE281041DA345C7AD (vo
 extern void ReceiverSample_OnStop_m638D89EB2062D0FED5533A5EE3B1869A73ABF4E9 (void);
 // 0x000000A5 System.Void Unity.RenderStreaming.Samples.ReceiverSample::.ctor()
 extern void ReceiverSample__ctor_m7549CDBB23C44958B0D7FFA44871532614B6324E (void);
-// 0x000000A6 System.Void Unity.RenderStreaming.Samples.ReceiverSample::<Awake>b__14_0(System.String)
-extern void ReceiverSample_U3CAwakeU3Eb__14_0_m1BDDFEBEC72FFF74634F1EC3188F9E28FB18E27B (void);
+// 0x000000A6 System.Void Unity.RenderStreaming.Samples.ReceiverSample::<Awake>b__15_0(System.String)
+extern void ReceiverSample_U3CAwakeU3Eb__15_0_mE288A80B610137F82F0510E52E8228E990B7F501 (void);
 // 0x000000A7 System.Void Unity.RenderStreaming.Samples.ReceiverSample/<>c::.cctor()
 extern void U3CU3Ec__cctor_mD03AC32CE141A2D95B6ED94F104230D2F66B5124 (void);
 // 0x000000A8 System.Void Unity.RenderStreaming.Samples.ReceiverSample/<>c::.ctor()
 extern void U3CU3Ec__ctor_m8813447A665C6DE83DF1B276DF6DBB0F00804451 (void);
-// 0x000000A9 System.Void Unity.RenderStreaming.Samples.ReceiverSample/<>c::<Awake>b__14_1(UnityEngine.AudioSource)
-extern void U3CU3Ec_U3CAwakeU3Eb__14_1_mCFA277DAFA2E2A851100D2E6AE1EED6D5E143573 (void);
+// 0x000000A9 System.Void Unity.RenderStreaming.Samples.ReceiverSample/<>c::<Awake>b__15_1(UnityEngine.AudioSource)
+extern void U3CU3Ec_U3CAwakeU3Eb__15_1_m19CA322180145EAC7978F8D99A573ACFBD115B34 (void);
 // 0x000000AA UnityEngine.GameObject Unity.RenderStreaming.Samples.BackButton::get_backButton()
 extern void BackButton_get_backButton_m39CA96D434CAEF1BC96CDF20B06E88EC1E0433F2 (void);
 // 0x000000AB System.Void Unity.RenderStreaming.Samples.BackButton::set_backButton(UnityEngine.GameObject)
@@ -689,10 +689,10 @@ static Il2CppMethodPointer s_methodPointers[255] =
 	ReceiverSample_OnStart_mC218F38D4EA728DD19B70A1FE281041DA345C7AD,
 	ReceiverSample_OnStop_m638D89EB2062D0FED5533A5EE3B1869A73ABF4E9,
 	ReceiverSample__ctor_m7549CDBB23C44958B0D7FFA44871532614B6324E,
-	ReceiverSample_U3CAwakeU3Eb__14_0_m1BDDFEBEC72FFF74634F1EC3188F9E28FB18E27B,
+	ReceiverSample_U3CAwakeU3Eb__15_0_mE288A80B610137F82F0510E52E8228E990B7F501,
 	U3CU3Ec__cctor_mD03AC32CE141A2D95B6ED94F104230D2F66B5124,
 	U3CU3Ec__ctor_m8813447A665C6DE83DF1B276DF6DBB0F00804451,
-	U3CU3Ec_U3CAwakeU3Eb__14_1_mCFA277DAFA2E2A851100D2E6AE1EED6D5E143573,
+	U3CU3Ec_U3CAwakeU3Eb__15_1_m19CA322180145EAC7978F8D99A573ACFBD115B34,
 	BackButton_get_backButton_m39CA96D434CAEF1BC96CDF20B06E88EC1E0433F2,
 	BackButton_set_backButton_m9BF1F018635A228B0AB8E353A879B9DAC1B23406,
 	BackButton_Start_m68C9B79C6E63A79FD17DF04FF192D85D19327A1D,

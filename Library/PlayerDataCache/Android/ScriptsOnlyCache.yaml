@@ -1,10 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CanvasControl
+    - Configuration
+    - DebugControl
     - LaunchButtonControl
     - MainControl
     - TCPConnection
+    - TouchHandler
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.EnhancedTouch.TouchSimulation
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -209,6 +214,14 @@ ScriptsOnlyBuild:
       Script: {instanceID: 109070}
     - Class: 114
       Script: {instanceID: 110992}
+    - Class: 114
+      Script: {instanceID: 128808}
+    - Class: 114
+      Script: {instanceID: 134592}
+    - Class: 114
+      Script: {instanceID: 174552}
+    - Class: 114
+      Script: {instanceID: 182724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1412,7 +1425,7 @@ ScriptsOnlyBuild:
     className: TCPTestClient
   - hash:
       serializedVersion: 2
-      Hash: 054b54b7b8b8aaee9fe2a58a5c396181
+      Hash: 8f644b1de10f00b7fc0c030032d9a848
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainControl
@@ -1422,6 +1435,30 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LaunchButtonControl
+  - hash:
+      serializedVersion: 2
+      Hash: 060e4c25dd10f21eaff29d0bd793879d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Configuration
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasControl
+  - hash:
+      serializedVersion: 2
+      Hash: afc96f59393eb43ae5fc5bf2d7141035
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TouchHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DebugControl
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity

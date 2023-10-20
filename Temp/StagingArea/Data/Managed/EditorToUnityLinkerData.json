@@ -16,6 +16,27 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "CanvasControl",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Configuration",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "DebugControl",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
@@ -162,6 +183,13 @@
             "managedAssemblyName": "Unity.TextMeshPro.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TMPro.TMP_StyleSheet",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TouchHandler",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -419,6 +447,13 @@
             "usedInScenes": [
                 "Assets/Scenes/GameScene.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Unity.InputSystem.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.InputSystem.EnhancedTouch.TouchSimulation",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Unity.InputSystem.dll",
