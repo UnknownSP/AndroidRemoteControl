@@ -13,7 +13,7 @@ public class ItemSlot
 {
     public string name;
     public bool _terminal = false;
-    public ItemSlot parent;
+    public string parent;
     public List<ItemSlot> Items = new List<ItemSlot>();
     public List<ItemOperation> operation = new List<ItemOperation>();
     public Action process;
@@ -22,16 +22,16 @@ public class ItemSlot
 public class KZ_TestMenu : MonoBehaviour
 {
 
-    public ItemSlot ST_DataMode;
-    public ItemSlot ST_ServiceSettings;
-    public ItemSlot ST_TestMode;
-    public ItemSlot MAIN_DataMode;
-    public ItemSlot MAIN_ServiceSettings;
-    public ItemSlot MAIN_TestMode;
-    public ItemSlot StationMenu;
-    public ItemSlot MainMenu;
-    public ItemSlot GameMode;
-    public ItemSlot OperationMode;
+    public ItemSlot ST_DataMode = new ItemSlot();
+    public ItemSlot ST_ServiceSettings = new ItemSlot();
+    public ItemSlot ST_TestMode = new ItemSlot();
+    public ItemSlot MAIN_DataMode = new ItemSlot();
+    public ItemSlot MAIN_ServiceSettings = new ItemSlot();
+    public ItemSlot MAIN_TestMode = new ItemSlot();
+    public ItemSlot StationMenu = new ItemSlot();
+    public ItemSlot MainMenu = new ItemSlot();
+    public ItemSlot GameMode = new ItemSlot();
+    public ItemSlot OperationMode = new ItemSlot();
 
     TestModeCanvasControl canvasControl;
 
@@ -54,38 +54,38 @@ public class KZ_TestMenu : MonoBehaviour
         ST_DataMode = new ItemSlot
         {
             name = "Data Mode",
-            parent = StationMenu,
+            parent = "Station Menu",
         };
         ST_ServiceSettings = new ItemSlot
         {
             name = "Service Setting",
-            parent = StationMenu,
+            parent = "Station Menu",
         };
         ST_TestMode = new ItemSlot
         {
             name = "Test Mode",
-            parent = StationMenu,
+            parent = "Station Menu",
         };
         MAIN_DataMode = new ItemSlot
         {
             name = "Data Mode",
-            parent = MainMenu,
+            parent = "Main Menu",
         };
         MAIN_ServiceSettings = new ItemSlot
         {
             name = "Service Setting",
-            parent = MainMenu,
+            parent = "Main Menu",
         };
         MAIN_TestMode = new ItemSlot
         {
             name = "Test Mode",
-            parent = MainMenu,
+            parent = "Main Menu",
         };
         //second
         StationMenu = new ItemSlot
         {
             name = "Station Menu",
-            parent = OperationMode,
+            parent = "Operation Mode",
             Items = new List<ItemSlot>
             {
                 ST_DataMode,
@@ -97,7 +97,7 @@ public class KZ_TestMenu : MonoBehaviour
         MainMenu = new ItemSlot
         {
             name = "Main Menu",
-            parent = OperationMode,
+            parent = "Operation Mode",
             Items = new List<ItemSlot>
             {
                 MAIN_DataMode,
@@ -116,7 +116,7 @@ public class KZ_TestMenu : MonoBehaviour
         //top
         OperationMode = new ItemSlot
         {
-            name = "Oparation Mode",
+            name = "Operation Mode",
             parent = null,
             Items = new List<ItemSlot>
             {
@@ -125,5 +125,21 @@ public class KZ_TestMenu : MonoBehaviour
                 GameMode,
             },
         };
+    }
+
+    public ItemSlot GetParent(string name)
+    {
+        switch (name)
+        {
+            case "Operation Mode":
+                return OperationMode;
+            case "Game Mode":
+                return GameMode;
+            case "Main Menu":
+                return MainMenu;
+            case "Station Menu":
+                return StationMenu;
+        }
+        return OperationMode;
     }
 }

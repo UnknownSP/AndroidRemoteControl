@@ -29,6 +29,7 @@ public class TestModeCanvasControl : MonoBehaviour
     bool _moveTestMode = false;
     bool _moveGameMode = false;
     bool _moveCanvasRight = false;
+    bool _moveCanvasLeft = false;
     float deltaTime = 0.0f;
     float moveTMTime = 0.0f;
     float moveGMTime = 0.0f;
@@ -39,6 +40,7 @@ public class TestModeCanvasControl : MonoBehaviour
     ItemSlot displayItemSlot = new ItemSlot();
     ItemSlot targetItemSlot = new ItemSlot();
     ItemButtonControl[,] ItemButton = new ItemButtonControl[2,14];
+    BackButtonControl backButton;
     int ItemSlotNum = 14;
 
     // Start is called before the first frame update
@@ -62,6 +64,7 @@ public class TestModeCanvasControl : MonoBehaviour
             ItemButton[0,i] = GameObject.Find("ItemButton1_" + (i + 1)).GetComponent<ItemButtonControl>();
             ItemButton[1,i] = GameObject.Find("ItemButton2_" + (i + 1)).GetComponent<ItemButtonControl>();
         }
+        backButton = GameObject.Find("TM_BackButton").GetComponent<BackButtonControl>();
         displayCanvas = DisplayCanvas.MainCanvas;
     }
 
@@ -80,6 +83,8 @@ public class TestModeCanvasControl : MonoBehaviour
                 _canvasMoving = false;
                 displayItemSlot = targetItemSlot;
                 EnableItemButton(displayItemSlot);
+                touchHandler.ResetTap();
+                backButton.Enable();
             }
         }
         if (_moveGameMode)
@@ -92,6 +97,8 @@ public class TestModeCanvasControl : MonoBehaviour
                 displayCanvas = DisplayCanvas.MainCanvas;
                 _canvasMoving = false;
                 DisableAllItemSlot();
+                backButton.Disable();
+                backButton.SetActive(false);
             }
         }
         if (_moveCanvasRight)
@@ -113,6 +120,29 @@ public class TestModeCanvasControl : MonoBehaviour
                 _canvasMoving = false;
                 displayItemSlot = targetItemSlot;
                 EnableItemButton(displayItemSlot);
+                backButton.Enable();
+            }
+        }
+        if (_moveCanvasLeft)
+        {
+            moveTime += deltaTime;
+            if (CanvasMove(moveTime, displayCanvas, Direction.Left))
+            {
+                moveTime = 0.0f;
+                _moveCanvasLeft = false;
+                DisableCanvasItemSlot(displayCanvas);
+                if (displayCanvas == DisplayCanvas.TestModeCanvas_1)
+                {
+                    displayCanvas = DisplayCanvas.TestModeCanvas_2;
+                }
+                else
+                {
+                    displayCanvas = DisplayCanvas.TestModeCanvas_1;
+                }
+                _canvasMoving = false;
+                displayItemSlot = targetItemSlot;
+                EnableItemButton(displayItemSlot);
+                backButton.Enable();
             }
         }
 
@@ -151,6 +181,7 @@ public class TestModeCanvasControl : MonoBehaviour
                         _canvasMoving = true;
                         CanvasSet(displayCanvas, Direction.Right);
                     }
+                    backButton.Disable();
                     touchHandler.ResetTap();
                     break;
                 }
@@ -159,6 +190,28 @@ public class TestModeCanvasControl : MonoBehaviour
 
                 }
             }
+        }
+
+        if (backButton._tapped && !_canvasMoving)
+        {
+            if (displayItemSlot.parent != null)
+            {
+                targetItemSlot = KZ_TestMenu.GetParent(displayItemSlot.parent);
+                SetNextItemSlot(targetItemSlot);
+                moveTime = 0.0f;
+                _moveCanvasLeft = true;
+                _canvasMoving = true;
+                CanvasSet(displayCanvas, Direction.Left);
+            }
+            else
+            {
+                GMButtonClick();
+            }
+            //Debug.Log(displayItemSlot.name);
+            //Debug.Log(displayItemSlot.parent.name);
+            touchHandler.ResetTap();
+            backButton.ResetTap();
+            backButton.Disable();
         }
     }
 
@@ -174,6 +227,8 @@ public class TestModeCanvasControl : MonoBehaviour
             targetItemSlot = KZ_TestMenu.OperationMode;
             SetNextItemSlot(targetItemSlot);
             _testMode = true;
+            backButton.Disable();
+            backButton.SetActive(true);
         }
     }
 
@@ -195,6 +250,8 @@ public class TestModeCanvasControl : MonoBehaviour
             }
             debugControl.SetActive(false);
             _testMode = false;
+            touchHandler.ResetTap();
+            backButton.Disable();
         }
     }
 

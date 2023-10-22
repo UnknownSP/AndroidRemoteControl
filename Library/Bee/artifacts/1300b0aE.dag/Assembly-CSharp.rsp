@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.WebRTC.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scenes/BackButtonControl.cs"
 "Assets/Scenes/Configuration.cs"
 "Assets/Scenes/DebugControl.cs"
 "Assets/Scenes/ItemButtonControl.cs"
@@ -366,7 +367,6 @@
 "Assets/Scenes/TCPConnection.cs"
 "Assets/Scenes/TCPTestClient.cs"
 "Assets/Scenes/TestModeCanvasControl.cs"
-"Assets/Scenes/TestModeControl.cs"
 "Assets/Scenes/TouchHandler.cs"
 -langversion:9.0
 

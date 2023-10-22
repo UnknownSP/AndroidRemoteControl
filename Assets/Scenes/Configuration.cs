@@ -21,6 +21,10 @@ public class Configuration : MonoBehaviour
     public Color ItemButtonPressedColor = new Color32(160,160,160,255);
     public Color ItemButtonDisableColorText = new Color32(0, 0, 0, 100);
     public Color ItemButtonEnableColorText = new Color32(0, 0, 0, 255);
+    public float BackButtonWidth = 200.0f;
+    public float BackButtonHeight = 100.0f;
+    public Color BackButtonNormalColor = new Color32(47, 157, 255, 255);
+    public Color BackButtonPressedColor = new Color32(28, 90, 144, 255);
     // Start is called before the first frame update
     void Start()
     {

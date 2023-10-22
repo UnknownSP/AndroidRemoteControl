@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{235315D4-A330-23CC-EB68-775E28D57EAF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/ItemButtonControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/KZ_TestMenu.cs">
     <Files>
       <File FileName="Assets/Scenes/MainControl.cs" Line="3" Column="19" />
-      <File FileName="Assets/Scenes/Configuration.cs" Line="20" Column="9" />
-      <File FileName="Assets/Scenes/TouchHandler.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scenes/DebugControl.cs" Line="17" Column="78" />
-      <File FileName="Assets/Scenes/TestModeCanvasControl.cs" Line="46" Column="79" />
-      <File FileName="Assets/Scenes/KZ_TestMenu.cs" Line="7" Column="2" />
-      <File FileName="Assets/Scenes/ItemButtonControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Configuration.cs" />
+      <File FileName="Assets/Scenes/TouchHandler.cs" />
+      <File FileName="Assets/Scenes/DebugControl.cs" />
+      <File FileName="Assets/Scenes/TestModeCanvasControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/ItemButtonControl.cs" />
+      <File FileName="Assets/Scenes/BackButtonControl.cs" />
+      <File FileName="Assets/Scenes/KZ_TestMenu.cs" Line="16" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9ce911e5-eb62-47e2-9a20-584a477a10aa" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d20fe08e-91e3-4c5a-9528-d3f0eb135b85" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
