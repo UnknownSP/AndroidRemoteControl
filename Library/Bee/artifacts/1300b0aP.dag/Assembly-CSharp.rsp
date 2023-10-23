@@ -307,15 +307,20 @@
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.WebRTC.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.UI.ref.dll"
-"Assets/Scenes/CanvasControl.cs"
+"Assets/Scenes/BackButtonControl.cs"
 "Assets/Scenes/Configuration.cs"
 "Assets/Scenes/DebugControl.cs"
+"Assets/Scenes/ItemButtonControl.cs"
+"Assets/Scenes/KZ_TestMenu.cs"
 "Assets/Scenes/LaunchButtonControl.cs"
 "Assets/Scenes/MainControl.cs"
 "Assets/Scenes/TCPClient.cs"
 "Assets/Scenes/TCPConnection.cs"
 "Assets/Scenes/TCPTestClient.cs"
+"Assets/Scenes/TestModeCanvasControl.cs"
+"Assets/Scenes/ToggleButton.cs"
 "Assets/Scenes/TouchHandler.cs"
+"Assets/Scenes/ValueSlider.cs"
 -langversion:9.0
 
 /deterministic

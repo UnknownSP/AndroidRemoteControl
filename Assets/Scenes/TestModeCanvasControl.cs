@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TestModeCanvasControl : MonoBehaviour
 {
@@ -24,8 +25,12 @@ public class TestModeCanvasControl : MonoBehaviour
     GameObject TestModeCanvas_1;
     GameObject TestModeCanvas_2;
     GameObject TestModeHeader;
+    GameObject ProcessCanvas;
+    TextMeshProUGUI pwdText;
+    string pwd;
     public bool _canvasMoving = false;
     public bool _testMode = false;
+    bool _processItem = false;
     bool _moveTestMode = false;
     bool _moveGameMode = false;
     bool _moveCanvasRight = false;
@@ -51,6 +56,8 @@ public class TestModeCanvasControl : MonoBehaviour
         TestModeCanvas_1 = GameObject.Find("TestModeCanvas_1");
         TestModeCanvas_2 = GameObject.Find("TestModeCanvas_2");
         TestModeHeader = GameObject.Find("TestModeHeader");
+        pwdText = GameObject.Find("TM_PWD").GetComponent<TextMeshProUGUI>();
+        ProcessCanvas = GameObject.Find("ProcessCanvas");
         testModeButton = GameObject.Find("TMButton").GetComponent<Button>();
         gameModeButton = GameObject.Find("TM_GMButton").GetComponent<Button>();
         testModeButton.onClick.AddListener(TMButtonClick);
@@ -85,6 +92,7 @@ public class TestModeCanvasControl : MonoBehaviour
                 EnableItemButton(displayItemSlot);
                 touchHandler.ResetTap();
                 backButton.Enable();
+                SetPWD(displayItemSlot);
             }
         }
         if (_moveGameMode)
@@ -99,6 +107,7 @@ public class TestModeCanvasControl : MonoBehaviour
                 DisableAllItemSlot();
                 backButton.Disable();
                 backButton.SetActive(false);
+                pwdText.text = "";
             }
         }
         if (_moveCanvasRight)
@@ -119,8 +128,9 @@ public class TestModeCanvasControl : MonoBehaviour
                 }
                 _canvasMoving = false;
                 displayItemSlot = targetItemSlot;
-                EnableItemButton(displayItemSlot);
+                if(!_processItem) EnableItemButton(displayItemSlot);
                 backButton.Enable();
+                SetPWD(displayItemSlot);
             }
         }
         if (_moveCanvasLeft)
@@ -130,7 +140,7 @@ public class TestModeCanvasControl : MonoBehaviour
             {
                 moveTime = 0.0f;
                 _moveCanvasLeft = false;
-                DisableCanvasItemSlot(displayCanvas);
+                if (!_processItem) DisableCanvasItemSlot(displayCanvas);
                 if (displayCanvas == DisplayCanvas.TestModeCanvas_1)
                 {
                     displayCanvas = DisplayCanvas.TestModeCanvas_2;
@@ -143,11 +153,12 @@ public class TestModeCanvasControl : MonoBehaviour
                 displayItemSlot = targetItemSlot;
                 EnableItemButton(displayItemSlot);
                 backButton.Enable();
+                SetPWD(displayItemSlot);
             }
         }
 
         //テストモード時の処理
-        if (_testMode && !_canvasMoving)
+        if (_testMode && !_canvasMoving && !_processItem)
         {
             //表示されてる全ボタンをループで監視
             for (int i=0; i<displayItemSlot.Items.Count; i++)
@@ -168,19 +179,23 @@ public class TestModeCanvasControl : MonoBehaviour
                         if (displayItemSlot.Items[i].name == "Game Mode")
                         {
                             displayItemSlot.Items[i].process();
+                            backButton.Disable();
                             touchHandler.ResetTap();
                             break;
                         }
+                        targetItemSlot = displayItemSlot.Items[i];
+                        targetItemSlot.processInit();
+                        _processItem = true;
                     }
                     else
                     {
                         targetItemSlot = displayItemSlot.Items[i];
                         SetNextItemSlot(targetItemSlot);
-                        moveTime = 0.0f;
-                        _moveCanvasRight = true;
-                        _canvasMoving = true;
-                        CanvasSet(displayCanvas, Direction.Right);
                     }
+                    moveTime = 0.0f;
+                    _moveCanvasRight = true;
+                    _canvasMoving = true;
+                    CanvasSet(displayCanvas, Direction.Right);
                     backButton.Disable();
                     touchHandler.ResetTap();
                     break;
@@ -190,6 +205,11 @@ public class TestModeCanvasControl : MonoBehaviour
 
                 }
             }
+        }
+
+        if (_processItem && !_canvasMoving)
+        {
+            displayItemSlot.process();
         }
 
         if (backButton._tapped && !_canvasMoving)
@@ -202,6 +222,8 @@ public class TestModeCanvasControl : MonoBehaviour
                 _moveCanvasLeft = true;
                 _canvasMoving = true;
                 CanvasSet(displayCanvas, Direction.Left);
+                if (_processItem) displayItemSlot.processDeinit();
+                _processItem = false;
             }
             else
             {
@@ -223,7 +245,7 @@ public class TestModeCanvasControl : MonoBehaviour
             _moveTestMode = true;
             moveTMTime = 0.0f;
             CanvasSet_Default();
-            debugControl.SetActive(true);
+            //debugControl.SetActive(true);
             targetItemSlot = KZ_TestMenu.OperationMode;
             SetNextItemSlot(targetItemSlot);
             _testMode = true;
@@ -248,10 +270,15 @@ public class TestModeCanvasControl : MonoBehaviour
                     CanvasSet_2ToGM();
                     break;
             }
-            debugControl.SetActive(false);
+            //debugControl.SetActive(false);
             _testMode = false;
             touchHandler.ResetTap();
             backButton.Disable();
+            if (_processItem)
+            {
+                displayItemSlot.processDeinit();
+                _processItem = false;
+            }
         }
     }
 
@@ -296,6 +323,7 @@ public class TestModeCanvasControl : MonoBehaviour
             if (direction == Direction.Right)
             {
                 TestModeCanvas_2.transform.position = new Vector3(config.displayWidth, 0, -2);
+                ProcessCanvas.transform.position = new Vector3(config.displayWidth, 0, -3);
             }
             if (direction == Direction.Left)
             {
@@ -309,6 +337,7 @@ public class TestModeCanvasControl : MonoBehaviour
             if (direction == Direction.Right)
             {
                 TestModeCanvas_1.transform.position = new Vector3(config.displayWidth, 0, -2);
+                ProcessCanvas.transform.position = new Vector3(config.displayWidth, 0, -3);
             }
             if (direction == Direction.Left)
             {
@@ -398,6 +427,7 @@ public class TestModeCanvasControl : MonoBehaviour
                 TestModeCanvas_1.transform.position = new Vector3(config.displayWidth * (float)direction - config.displayWidth * movingRatio * (float)direction, 0, -2);
                 TestModeCanvas_2.transform.position = new Vector3(-config.displayWidth * movingRatio * (float)direction, 0, -2);
             }
+            ProcessCanvas.transform.position = new Vector3(config.displayWidth * (float)direction - config.displayWidth * movingRatio * (float)direction, 0, -3);
         }
         else
         {
@@ -409,6 +439,7 @@ public class TestModeCanvasControl : MonoBehaviour
             {
                 CanvasSet_1ToGM();
             }
+            ProcessCanvas.transform.position = new Vector3(0, 0, -3);
             return true;
         }
 
@@ -464,6 +495,20 @@ public class TestModeCanvasControl : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void SetPWD(ItemSlot display)
+    {
+        int count = 1;
+        List<string> getPWD = KZ_TestMenu.GetPWD(display);
+        pwd = getPWD[getPWD.Count-1];
+        for (int i = getPWD.Count-2; i >= 0; i--)
+        {
+            pwd += " > " + getPWD[i];
+            count++;
+            if (count % 2 == 0) pwd += "\n";
+        }
+        pwdText.text = pwd;
     }
 
 }

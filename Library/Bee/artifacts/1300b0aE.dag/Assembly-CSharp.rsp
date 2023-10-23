@@ -367,7 +367,9 @@
 "Assets/Scenes/TCPConnection.cs"
 "Assets/Scenes/TCPTestClient.cs"
 "Assets/Scenes/TestModeCanvasControl.cs"
+"Assets/Scenes/ToggleButton.cs"
 "Assets/Scenes/TouchHandler.cs"
+"Assets/Scenes/ValueSlider.cs"
 -langversion:9.0
 
 /deterministic
