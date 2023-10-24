@@ -90,151 +90,153 @@ extern void KZ_TestMenu_ST_TM_LED_Init_m1A2C80C5E5BAE5713E613EEE430B5B434341A579
 extern void KZ_TestMenu_ST_TM_LED_Deinit_mCAEC2F8F963932D04DD6D8522DF3998ABD65876A (void);
 // 0x00000027 System.Void KZ_TestMenu::ST_TM_LED_Process()
 extern void KZ_TestMenu_ST_TM_LED_Process_m5EAF6A629175FA2758A9D76AE3128085472F255C (void);
-// 0x00000028 System.Void KZ_TestMenu::.ctor()
+// 0x00000028 System.Void KZ_TestMenu::setTCPConnection(TCPConnection)
+extern void KZ_TestMenu_setTCPConnection_m45BF747D5371D607102962D5213C479DE724A24C (void);
+// 0x00000029 System.Void KZ_TestMenu::.ctor()
 extern void KZ_TestMenu__ctor_m6715CA40A2B36FF6D4E305760E1E8478C630406B (void);
-// 0x00000029 System.Void KZ_TestMenu::<SetOparationMode>b__19_0()
-extern void KZ_TestMenu_U3CSetOparationModeU3Eb__19_0_m1B183A1CA32A8B3136F058863D86BEF3374905C9 (void);
-// 0x0000002A System.Void KZ_TestMenu::<SetOparationMode>b__19_1()
-extern void KZ_TestMenu_U3CSetOparationModeU3Eb__19_1_mF89A6FF9DF5D322A04A1058688C21B72BBDB1318 (void);
-// 0x0000002B System.Void KZ_TestMenu::<SetOparationMode>b__19_2()
-extern void KZ_TestMenu_U3CSetOparationModeU3Eb__19_2_m002E44AA8A70C4579CD723F6002EBD783AC51C6E (void);
-// 0x0000002C System.Void KZ_TestMenu::<SetOparationMode>b__19_3()
-extern void KZ_TestMenu_U3CSetOparationModeU3Eb__19_3_m086BDC9D4E3A63680139E7A5A79EAFB164B127D8 (void);
-// 0x0000002D System.Void LaunchButtonControl::Start()
+// 0x0000002A System.Void KZ_TestMenu::<SetOparationMode>b__27_0()
+extern void KZ_TestMenu_U3CSetOparationModeU3Eb__27_0_m886E2424D1B0AC00049F30DBD28D636B42E20733 (void);
+// 0x0000002B System.Void KZ_TestMenu::<SetOparationMode>b__27_1()
+extern void KZ_TestMenu_U3CSetOparationModeU3Eb__27_1_mC455F6BA1E1F6E302B83D44BD3F7464ED70D22AC (void);
+// 0x0000002C System.Void KZ_TestMenu::<SetOparationMode>b__27_2()
+extern void KZ_TestMenu_U3CSetOparationModeU3Eb__27_2_m08C863F71AC1B07C481ED2193C55F5268722C705 (void);
+// 0x0000002D System.Void KZ_TestMenu::<SetOparationMode>b__27_3()
+extern void KZ_TestMenu_U3CSetOparationModeU3Eb__27_3_mE771BD4D6A5E2FC1C70D3850E0D849FBF64CD14D (void);
+// 0x0000002E System.Void LaunchButtonControl::Start()
 extern void LaunchButtonControl_Start_m37991ED341C3AE2BE48F2655091AC917D0C49CE2 (void);
-// 0x0000002E System.Void LaunchButtonControl::Update()
+// 0x0000002F System.Void LaunchButtonControl::Update()
 extern void LaunchButtonControl_Update_m386892365ABB4104D013CE0819B2E08C7D856DE2 (void);
-// 0x0000002F System.Void LaunchButtonControl::buttonClick()
+// 0x00000030 System.Void LaunchButtonControl::buttonClick()
 extern void LaunchButtonControl_buttonClick_m18C276B5E7D8B7D52D346C4EEC06342DD2524983 (void);
-// 0x00000030 System.Void LaunchButtonControl::setTCPConnection(TCPConnection)
+// 0x00000031 System.Void LaunchButtonControl::setTCPConnection(TCPConnection)
 extern void LaunchButtonControl_setTCPConnection_mFE22E7818AB1913267B75822FAF2A9FBCED56335 (void);
-// 0x00000031 System.Threading.Tasks.Task LaunchButtonControl::TCPReceiveData()
+// 0x00000032 System.Threading.Tasks.Task LaunchButtonControl::TCPReceiveData()
 extern void LaunchButtonControl_TCPReceiveData_m3C9725F372C0374412CED321D8D7D4EB8611F386 (void);
-// 0x00000032 System.Void LaunchButtonControl::.ctor()
+// 0x00000033 System.Void LaunchButtonControl::.ctor()
 extern void LaunchButtonControl__ctor_m5A9284D62A0B75EA51A02A5F11FDF86E7A9E2F8D (void);
-// 0x00000033 System.String[] LaunchButtonControl::<TCPReceiveData>b__16_0()
-extern void LaunchButtonControl_U3CTCPReceiveDataU3Eb__16_0_m03C414442EA6774DCE16D553E49F3627058F5763 (void);
-// 0x00000034 System.Void LaunchButtonControl/<Update>d__13::MoveNext()
-extern void U3CUpdateU3Ed__13_MoveNext_m482740C54AF901662F1BFBF270A7EA5EC83A476B (void);
-// 0x00000035 System.Void LaunchButtonControl/<Update>d__13::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-extern void U3CUpdateU3Ed__13_SetStateMachine_mE1DDFF9758EE52502B23A708D998A90B6119C58C (void);
-// 0x00000036 System.Void LaunchButtonControl/<TCPReceiveData>d__16::MoveNext()
-extern void U3CTCPReceiveDataU3Ed__16_MoveNext_mA026EA566F78A687DBB7E11092D288D0B572BF8A (void);
-// 0x00000037 System.Void LaunchButtonControl/<TCPReceiveData>d__16::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-extern void U3CTCPReceiveDataU3Ed__16_SetStateMachine_mD88C3FBD76A739D867B9F4A7527E43010F26AA8E (void);
-// 0x00000038 System.Void MainControl::Start()
+// 0x00000034 System.String[] LaunchButtonControl::<TCPReceiveData>b__17_0()
+extern void LaunchButtonControl_U3CTCPReceiveDataU3Eb__17_0_m8D7FCB568D86EE59E83F20746C1BC389B4D12174 (void);
+// 0x00000035 System.Void LaunchButtonControl/<Update>d__14::MoveNext()
+extern void U3CUpdateU3Ed__14_MoveNext_mA26AF81F20F1DAA1380E7A703A040F3D968F3383 (void);
+// 0x00000036 System.Void LaunchButtonControl/<Update>d__14::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+extern void U3CUpdateU3Ed__14_SetStateMachine_mB1B56B3B3A0A07A0578FBD279531643469C4F46A (void);
+// 0x00000037 System.Void LaunchButtonControl/<TCPReceiveData>d__17::MoveNext()
+extern void U3CTCPReceiveDataU3Ed__17_MoveNext_m156AB9A5B488C66E89ABFA5FEB2A69F1761A9707 (void);
+// 0x00000038 System.Void LaunchButtonControl/<TCPReceiveData>d__17::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+extern void U3CTCPReceiveDataU3Ed__17_SetStateMachine_mEF5BA98DC663159B73E67A25FE3AEBB52000C296 (void);
+// 0x00000039 System.Void MainControl::Start()
 extern void MainControl_Start_mF312DAC47AF69FA976384EC6BE8D9973F57AD97E (void);
-// 0x00000039 System.Void MainControl::Update()
+// 0x0000003A System.Void MainControl::Update()
 extern void MainControl_Update_mC19562AEFA5FC3312CF12D55A3837408E976659B (void);
-// 0x0000003A System.Void MainControl::.ctor()
+// 0x0000003B System.Void MainControl::.ctor()
 extern void MainControl__ctor_m2B2210A74E2F0F655B7C4A47972AD180CC4BEC48 (void);
-// 0x0000003B System.Void TCPClient::Awake()
+// 0x0000003C System.Void TCPClient::Awake()
 extern void TCPClient_Awake_mC2EE22D235345E47B8453B98674175A0F394A6A8 (void);
-// 0x0000003C System.Void TCPClient::OnGUI()
+// 0x0000003D System.Void TCPClient::OnGUI()
 extern void TCPClient_OnGUI_m20C74190B28C62AC706C4FA3660FD8DD97B35C78 (void);
-// 0x0000003D System.Void TCPClient::OnDestroy()
+// 0x0000003E System.Void TCPClient::OnDestroy()
 extern void TCPClient_OnDestroy_m9E889317C5E42AF8B17861033FC065CEDF81743F (void);
-// 0x0000003E System.Void TCPClient::.ctor()
+// 0x0000003F System.Void TCPClient::.ctor()
 extern void TCPClient__ctor_m9134901FF2D14FE1845B9016969626F00504D5D7 (void);
-// 0x0000003F System.Boolean TCPConnection::Connect()
+// 0x00000040 System.Boolean TCPConnection::Connect()
 extern void TCPConnection_Connect_m8E494C2042B976C97692617D86A5E086FA7546F8 (void);
-// 0x00000040 System.Void TCPConnection::Update()
+// 0x00000041 System.Void TCPConnection::Update()
 extern void TCPConnection_Update_m14A59BDE6CCAB4E4A37F061D8DDA90443F11D526 (void);
-// 0x00000041 System.Void TCPConnection::SendData(System.String)
+// 0x00000042 System.Void TCPConnection::SendData(System.String)
 extern void TCPConnection_SendData_mABB16FF6D756EE76EF6B87FC356D7A7F35B4D562 (void);
-// 0x00000042 System.String TCPConnection::ReceiveData()
+// 0x00000043 System.String TCPConnection::ReceiveData()
 extern void TCPConnection_ReceiveData_m97064B32C2D927D7B1CC81F5217623CBEA721F0D (void);
-// 0x00000043 System.Void TCPConnection::OnDestroy()
+// 0x00000044 System.Void TCPConnection::OnDestroy()
 extern void TCPConnection_OnDestroy_m0CE06348A3D5F9D4F978A0929F879F2C16B5DEA5 (void);
-// 0x00000044 System.Void TCPConnection::.ctor()
+// 0x00000045 System.Void TCPConnection::.ctor()
 extern void TCPConnection__ctor_mBA6ED71094BBA03075ED4A6DA7EE182CCBCC4C96 (void);
-// 0x00000045 System.Void TCPTestClient::Start()
+// 0x00000046 System.Void TCPTestClient::Start()
 extern void TCPTestClient_Start_m15BE93C6335AE35A33979473B141E96A75838299 (void);
-// 0x00000046 System.Void TCPTestClient::Update()
+// 0x00000047 System.Void TCPTestClient::Update()
 extern void TCPTestClient_Update_m53F2B81DC22D45AA4B23D8168F91A4BA48FC4AA8 (void);
-// 0x00000047 System.Void TCPTestClient::ConnectToTcpServer()
+// 0x00000048 System.Void TCPTestClient::ConnectToTcpServer()
 extern void TCPTestClient_ConnectToTcpServer_m6EDA12B5A5E71D0F9F8903BA786789EC31C2A254 (void);
-// 0x00000048 System.Void TCPTestClient::ListenForData()
+// 0x00000049 System.Void TCPTestClient::ListenForData()
 extern void TCPTestClient_ListenForData_mC7FC0FB92F3E0EF83BBF8706B03DBB9831BCDCC9 (void);
-// 0x00000049 System.Void TCPTestClient::SendMessage()
+// 0x0000004A System.Void TCPTestClient::SendMessage()
 extern void TCPTestClient_SendMessage_mB3D3C021291D4827BECE3663BE658156EFC8DD85 (void);
-// 0x0000004A System.Void TCPTestClient::.ctor()
+// 0x0000004B System.Void TCPTestClient::.ctor()
 extern void TCPTestClient__ctor_m23F3049AD180F29522F99BF39669A11AD87905F3 (void);
-// 0x0000004B System.Void TestModeCanvasControl::Start()
+// 0x0000004C System.Void TestModeCanvasControl::Start()
 extern void TestModeCanvasControl_Start_mEBEA78DE483CC9DB205ECE8AC91C8C7DBA17A927 (void);
-// 0x0000004C System.Void TestModeCanvasControl::Update()
+// 0x0000004D System.Void TestModeCanvasControl::Update()
 extern void TestModeCanvasControl_Update_mA349B5628C60FB2D006E7B3AE81D9200DB9C48CD (void);
-// 0x0000004D System.Void TestModeCanvasControl::TMButtonClick()
+// 0x0000004E System.Void TestModeCanvasControl::TMButtonClick()
 extern void TestModeCanvasControl_TMButtonClick_m9B361A83F469EA49C50482DD53770C3E8A450707 (void);
-// 0x0000004E System.Void TestModeCanvasControl::GMButtonClick()
+// 0x0000004F System.Void TestModeCanvasControl::GMButtonClick()
 extern void TestModeCanvasControl_GMButtonClick_m977F0C642E8B3D9BAC6554E915A85EE8BC9C779F (void);
-// 0x0000004F System.Void TestModeCanvasControl::CanvasSet_Default()
+// 0x00000050 System.Void TestModeCanvasControl::CanvasSet_Default()
 extern void TestModeCanvasControl_CanvasSet_Default_mF459A95A3DD36814AEAF53CB2B09BD0DE59A013D (void);
-// 0x00000050 System.Void TestModeCanvasControl::CanvasSet_TMDefault()
+// 0x00000051 System.Void TestModeCanvasControl::CanvasSet_TMDefault()
 extern void TestModeCanvasControl_CanvasSet_TMDefault_m3DFBB3C798FC8A8133D707AF334860282515D88E (void);
-// 0x00000051 System.Void TestModeCanvasControl::CanvasSet_1ToGM()
+// 0x00000052 System.Void TestModeCanvasControl::CanvasSet_1ToGM()
 extern void TestModeCanvasControl_CanvasSet_1ToGM_m76BB3EF78CB10B2ED18DA5D3FF372C2CC5C59F7F (void);
-// 0x00000052 System.Void TestModeCanvasControl::CanvasSet_2ToGM()
+// 0x00000053 System.Void TestModeCanvasControl::CanvasSet_2ToGM()
 extern void TestModeCanvasControl_CanvasSet_2ToGM_m37960D4861A129536DBE5D6B174B59FE245DAEF9 (void);
-// 0x00000053 System.Void TestModeCanvasControl::CanvasSet(TestModeCanvasControl/DisplayCanvas,TestModeCanvasControl/Direction)
+// 0x00000054 System.Void TestModeCanvasControl::CanvasSet(TestModeCanvasControl/DisplayCanvas,TestModeCanvasControl/Direction)
 extern void TestModeCanvasControl_CanvasSet_mBEDEB0E8403AEE1D2F18138BECB72F9227BEF6EC (void);
-// 0x00000054 System.Void TestModeCanvasControl::SetNextItemSlot(ItemSlot)
+// 0x00000055 System.Void TestModeCanvasControl::SetNextItemSlot(ItemSlot)
 extern void TestModeCanvasControl_SetNextItemSlot_m14EE29F266192E9383C5A9D560F651CC6453B968 (void);
-// 0x00000055 System.Void TestModeCanvasControl::EnableItemButton(ItemSlot)
+// 0x00000056 System.Void TestModeCanvasControl::EnableItemButton(ItemSlot)
 extern void TestModeCanvasControl_EnableItemButton_m59948885E00B4A8E01B4895D8F36B974D13F3EE1 (void);
-// 0x00000056 System.Void TestModeCanvasControl::DisableAllItemSlot()
+// 0x00000057 System.Void TestModeCanvasControl::DisableAllItemSlot()
 extern void TestModeCanvasControl_DisableAllItemSlot_m7EF57AA9FA1E48DC8A61522756479499E7F096A5 (void);
-// 0x00000057 System.Void TestModeCanvasControl::DisableCanvasItemSlot(TestModeCanvasControl/DisplayCanvas)
+// 0x00000058 System.Void TestModeCanvasControl::DisableCanvasItemSlot(TestModeCanvasControl/DisplayCanvas)
 extern void TestModeCanvasControl_DisableCanvasItemSlot_m7772EE8308614EF78D27C3132DDC0106B9C4998B (void);
-// 0x00000058 System.Boolean TestModeCanvasControl::CanvasMove(System.Single,TestModeCanvasControl/DisplayCanvas,TestModeCanvasControl/Direction)
+// 0x00000059 System.Boolean TestModeCanvasControl::CanvasMove(System.Single,TestModeCanvasControl/DisplayCanvas,TestModeCanvasControl/Direction)
 extern void TestModeCanvasControl_CanvasMove_m603D0582FA4A61649BEAEBDC827B06250B6FB256 (void);
-// 0x00000059 System.Boolean TestModeCanvasControl::CanvasMove_TestMode(System.Single)
+// 0x0000005A System.Boolean TestModeCanvasControl::CanvasMove_TestMode(System.Single)
 extern void TestModeCanvasControl_CanvasMove_TestMode_mCA4A9C4A3C2032F879E9B5033CB0B32D916ABC1E (void);
-// 0x0000005A System.Boolean TestModeCanvasControl::CanvasMove_GameMode(System.Single)
+// 0x0000005B System.Boolean TestModeCanvasControl::CanvasMove_GameMode(System.Single)
 extern void TestModeCanvasControl_CanvasMove_GameMode_mB48A5DEA3B4B9D2D26B6DDE8163D87276A9795B0 (void);
-// 0x0000005B System.Void TestModeCanvasControl::SetPWD(ItemSlot)
+// 0x0000005C System.Void TestModeCanvasControl::SetPWD(ItemSlot)
 extern void TestModeCanvasControl_SetPWD_m2F0072C43456792854C7DA88D775F057B448D285 (void);
-// 0x0000005C System.Void TestModeCanvasControl::.ctor()
+// 0x0000005D System.Void TestModeCanvasControl::.ctor()
 extern void TestModeCanvasControl__ctor_m6158AEA18C54CFF54351DB52DAE29A704F5B5B04 (void);
-// 0x0000005D System.Void ToggleButton::Start()
+// 0x0000005E System.Void ToggleButton::Start()
 extern void ToggleButton_Start_m6A9635F9EAC8BF933B6860CC92DA2DEB67C85AF7 (void);
-// 0x0000005E System.Void ToggleButton::Update()
+// 0x0000005F System.Void ToggleButton::Update()
 extern void ToggleButton_Update_m92FA1537A6EE36430CFE17BAF2B3BD3534D7C810 (void);
-// 0x0000005F System.Void ToggleButton::SetActive(System.Boolean)
+// 0x00000060 System.Void ToggleButton::SetActive(System.Boolean)
 extern void ToggleButton_SetActive_m62CBD7830110CD69E38CD5F90131EA4AB561FD00 (void);
-// 0x00000060 System.Void ToggleButton::SwitchToggle()
+// 0x00000061 System.Void ToggleButton::SwitchToggle()
 extern void ToggleButton_SwitchToggle_m6BEA92B8BCF2253A1B0BA93EE4E619AFFA81BECA (void);
-// 0x00000061 System.Void ToggleButton::SetText(System.String)
+// 0x00000062 System.Void ToggleButton::SetText(System.String)
 extern void ToggleButton_SetText_mC2E6B234149036575C8400E39FBB2F87448C1D37 (void);
-// 0x00000062 System.Void ToggleButton::SetPosition(System.Single)
+// 0x00000063 System.Void ToggleButton::SetPosition(System.Single)
 extern void ToggleButton_SetPosition_m01B132B2576F942FCBB52C1B868DA7A2C9C7B7BD (void);
-// 0x00000063 System.Single ToggleButton::MoveFunc(System.Single)
+// 0x00000064 System.Single ToggleButton::MoveFunc(System.Single)
 extern void ToggleButton_MoveFunc_mDFFC9CC5B85D8516202F535573FB4BF0270863F2 (void);
-// 0x00000064 System.Void ToggleButton::.ctor()
+// 0x00000065 System.Void ToggleButton::.ctor()
 extern void ToggleButton__ctor_m5C1F75E2E48156809E1F018E162AD078222829CD (void);
-// 0x00000065 System.Void TouchHandler::Start()
+// 0x00000066 System.Void TouchHandler::Start()
 extern void TouchHandler_Start_m6B0B5F04E29C13B8F518229A1177D1E1D40A5A0B (void);
-// 0x00000066 System.Void TouchHandler::Update()
+// 0x00000067 System.Void TouchHandler::Update()
 extern void TouchHandler_Update_m1138E0E69A5CDDD4511BE8E6E445983B83B626DF (void);
-// 0x00000067 System.Void TouchHandler::ResetTap()
+// 0x00000068 System.Void TouchHandler::ResetTap()
 extern void TouchHandler_ResetTap_m6E0409C94C8216C490A8B546EA25363620B59E84 (void);
-// 0x00000068 System.Void TouchHandler::ResetLongTap()
+// 0x00000069 System.Void TouchHandler::ResetLongTap()
 extern void TouchHandler_ResetLongTap_m4DD74CF9706E4492B95AAD9946F751B322D6D381 (void);
-// 0x00000069 System.Void TouchHandler::.ctor()
+// 0x0000006A System.Void TouchHandler::.ctor()
 extern void TouchHandler__ctor_mDF2FCF69149565CEA7539FA3AE2C1C61E9BC35BC (void);
-// 0x0000006A System.Void ValueSlider::Start()
+// 0x0000006B System.Void ValueSlider::Start()
 extern void ValueSlider_Start_m78EE4B45AC318538E7D88555652C239683A8DE86 (void);
-// 0x0000006B System.Void ValueSlider::Update()
+// 0x0000006C System.Void ValueSlider::Update()
 extern void ValueSlider_Update_m658C94863E5CA9A5368B05EE8379B218CC7AB685 (void);
-// 0x0000006C System.Void ValueSlider::SetActive(System.Boolean)
+// 0x0000006D System.Void ValueSlider::SetActive(System.Boolean)
 extern void ValueSlider_SetActive_mD6B0941EA156212AA79D091A9D1C2603154F0EA3 (void);
-// 0x0000006D System.Void ValueSlider::SetText(System.String)
+// 0x0000006E System.Void ValueSlider::SetText(System.String)
 extern void ValueSlider_SetText_m5DB843F200EAE21A738EDE554AB769E3B4588454 (void);
-// 0x0000006E System.Void ValueSlider::SetPosition(System.Single)
+// 0x0000006F System.Void ValueSlider::SetPosition(System.Single)
 extern void ValueSlider_SetPosition_m76E8C32EFC1B9E8B621EA9B0BEA9DCDC139FD3C6 (void);
-// 0x0000006F System.Void ValueSlider::.ctor()
+// 0x00000070 System.Void ValueSlider::.ctor()
 extern void ValueSlider__ctor_m32D8E3DBD64EA3768686048409447F683E7CAB7B (void);
-static Il2CppMethodPointer s_methodPointers[111] = 
+static Il2CppMethodPointer s_methodPointers[112] = 
 {
 	BackButtonControl_Start_mB08DD6C627A6EB9D094974D7548FB089C11EF479,
 	BackButtonControl_Update_m76281CA152ED708E85E53E61C52098FE6307D3BA,
@@ -275,22 +277,23 @@ static Il2CppMethodPointer s_methodPointers[111] =
 	KZ_TestMenu_ST_TM_LED_Init_m1A2C80C5E5BAE5713E613EEE430B5B434341A579,
 	KZ_TestMenu_ST_TM_LED_Deinit_mCAEC2F8F963932D04DD6D8522DF3998ABD65876A,
 	KZ_TestMenu_ST_TM_LED_Process_m5EAF6A629175FA2758A9D76AE3128085472F255C,
+	KZ_TestMenu_setTCPConnection_m45BF747D5371D607102962D5213C479DE724A24C,
 	KZ_TestMenu__ctor_m6715CA40A2B36FF6D4E305760E1E8478C630406B,
-	KZ_TestMenu_U3CSetOparationModeU3Eb__19_0_m1B183A1CA32A8B3136F058863D86BEF3374905C9,
-	KZ_TestMenu_U3CSetOparationModeU3Eb__19_1_mF89A6FF9DF5D322A04A1058688C21B72BBDB1318,
-	KZ_TestMenu_U3CSetOparationModeU3Eb__19_2_m002E44AA8A70C4579CD723F6002EBD783AC51C6E,
-	KZ_TestMenu_U3CSetOparationModeU3Eb__19_3_m086BDC9D4E3A63680139E7A5A79EAFB164B127D8,
+	KZ_TestMenu_U3CSetOparationModeU3Eb__27_0_m886E2424D1B0AC00049F30DBD28D636B42E20733,
+	KZ_TestMenu_U3CSetOparationModeU3Eb__27_1_mC455F6BA1E1F6E302B83D44BD3F7464ED70D22AC,
+	KZ_TestMenu_U3CSetOparationModeU3Eb__27_2_m08C863F71AC1B07C481ED2193C55F5268722C705,
+	KZ_TestMenu_U3CSetOparationModeU3Eb__27_3_mE771BD4D6A5E2FC1C70D3850E0D849FBF64CD14D,
 	LaunchButtonControl_Start_m37991ED341C3AE2BE48F2655091AC917D0C49CE2,
 	LaunchButtonControl_Update_m386892365ABB4104D013CE0819B2E08C7D856DE2,
 	LaunchButtonControl_buttonClick_m18C276B5E7D8B7D52D346C4EEC06342DD2524983,
 	LaunchButtonControl_setTCPConnection_mFE22E7818AB1913267B75822FAF2A9FBCED56335,
 	LaunchButtonControl_TCPReceiveData_m3C9725F372C0374412CED321D8D7D4EB8611F386,
 	LaunchButtonControl__ctor_m5A9284D62A0B75EA51A02A5F11FDF86E7A9E2F8D,
-	LaunchButtonControl_U3CTCPReceiveDataU3Eb__16_0_m03C414442EA6774DCE16D553E49F3627058F5763,
-	U3CUpdateU3Ed__13_MoveNext_m482740C54AF901662F1BFBF270A7EA5EC83A476B,
-	U3CUpdateU3Ed__13_SetStateMachine_mE1DDFF9758EE52502B23A708D998A90B6119C58C,
-	U3CTCPReceiveDataU3Ed__16_MoveNext_mA026EA566F78A687DBB7E11092D288D0B572BF8A,
-	U3CTCPReceiveDataU3Ed__16_SetStateMachine_mD88C3FBD76A739D867B9F4A7527E43010F26AA8E,
+	LaunchButtonControl_U3CTCPReceiveDataU3Eb__17_0_m8D7FCB568D86EE59E83F20746C1BC389B4D12174,
+	U3CUpdateU3Ed__14_MoveNext_mA26AF81F20F1DAA1380E7A703A040F3D968F3383,
+	U3CUpdateU3Ed__14_SetStateMachine_mB1B56B3B3A0A07A0578FBD279531643469C4F46A,
+	U3CTCPReceiveDataU3Ed__17_MoveNext_m156AB9A5B488C66E89ABFA5FEB2A69F1761A9707,
+	U3CTCPReceiveDataU3Ed__17_SetStateMachine_mEF5BA98DC663159B73E67A25FE3AEBB52000C296,
 	MainControl_Start_mF312DAC47AF69FA976384EC6BE8D9973F57AD97E,
 	MainControl_Update_mC19562AEFA5FC3312CF12D55A3837408E976659B,
 	MainControl__ctor_m2B2210A74E2F0F655B7C4A47972AD180CC4BEC48,
@@ -348,18 +351,18 @@ static Il2CppMethodPointer s_methodPointers[111] =
 	ValueSlider_SetPosition_m76E8C32EFC1B9E8B621EA9B0BEA9DCDC139FD3C6,
 	ValueSlider__ctor_m32D8E3DBD64EA3768686048409447F683E7CAB7B,
 };
-extern void U3CUpdateU3Ed__13_MoveNext_m482740C54AF901662F1BFBF270A7EA5EC83A476B_AdjustorThunk (void);
-extern void U3CUpdateU3Ed__13_SetStateMachine_mE1DDFF9758EE52502B23A708D998A90B6119C58C_AdjustorThunk (void);
-extern void U3CTCPReceiveDataU3Ed__16_MoveNext_mA026EA566F78A687DBB7E11092D288D0B572BF8A_AdjustorThunk (void);
-extern void U3CTCPReceiveDataU3Ed__16_SetStateMachine_mD88C3FBD76A739D867B9F4A7527E43010F26AA8E_AdjustorThunk (void);
+extern void U3CUpdateU3Ed__14_MoveNext_mA26AF81F20F1DAA1380E7A703A040F3D968F3383_AdjustorThunk (void);
+extern void U3CUpdateU3Ed__14_SetStateMachine_mB1B56B3B3A0A07A0578FBD279531643469C4F46A_AdjustorThunk (void);
+extern void U3CTCPReceiveDataU3Ed__17_MoveNext_m156AB9A5B488C66E89ABFA5FEB2A69F1761A9707_AdjustorThunk (void);
+extern void U3CTCPReceiveDataU3Ed__17_SetStateMachine_mEF5BA98DC663159B73E67A25FE3AEBB52000C296_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] = 
 {
-	{ 0x06000034, U3CUpdateU3Ed__13_MoveNext_m482740C54AF901662F1BFBF270A7EA5EC83A476B_AdjustorThunk },
-	{ 0x06000035, U3CUpdateU3Ed__13_SetStateMachine_mE1DDFF9758EE52502B23A708D998A90B6119C58C_AdjustorThunk },
-	{ 0x06000036, U3CTCPReceiveDataU3Ed__16_MoveNext_mA026EA566F78A687DBB7E11092D288D0B572BF8A_AdjustorThunk },
-	{ 0x06000037, U3CTCPReceiveDataU3Ed__16_SetStateMachine_mD88C3FBD76A739D867B9F4A7527E43010F26AA8E_AdjustorThunk },
+	{ 0x06000035, U3CUpdateU3Ed__14_MoveNext_mA26AF81F20F1DAA1380E7A703A040F3D968F3383_AdjustorThunk },
+	{ 0x06000036, U3CUpdateU3Ed__14_SetStateMachine_mB1B56B3B3A0A07A0578FBD279531643469C4F46A_AdjustorThunk },
+	{ 0x06000037, U3CTCPReceiveDataU3Ed__17_MoveNext_m156AB9A5B488C66E89ABFA5FEB2A69F1761A9707_AdjustorThunk },
+	{ 0x06000038, U3CTCPReceiveDataU3Ed__17_SetStateMachine_mEF5BA98DC663159B73E67A25FE3AEBB52000C296_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[111] = 
+static const int32_t s_InvokerIndices[112] = 
 {
 	5477,
 	5477,
@@ -400,6 +403,7 @@ static const int32_t s_InvokerIndices[111] =
 	5477,
 	5477,
 	5477,
+	4338,
 	5477,
 	5477,
 	5477,
@@ -477,7 +481,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	111,
+	112,
 	s_methodPointers,
 	4,
 	s_adjustorThunks,

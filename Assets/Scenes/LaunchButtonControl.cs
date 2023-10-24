@@ -10,6 +10,7 @@ public class LaunchButtonControl : MonoBehaviour
     GameObject ButtonObject;
     Button launchButton;
     TCPConnection TCPCon;
+    TestModeCanvasControl testModeControl;
     private Configuration config;
     bool _enabledTCP = false;
     public bool _enabledLaunch = false;
@@ -31,6 +32,7 @@ public class LaunchButtonControl : MonoBehaviour
     {
         config = GameObject.Find("Configuration").GetComponent<Configuration>();
         ButtonObject = GameObject.Find("LaunchButton");
+        testModeControl = GameObject.Find("MainCamera").GetComponent<TestModeCanvasControl>();
         launchButton = ButtonObject.GetComponent<Button>();
         launchButton.interactable = false;
         launchButton.onClick.AddListener(buttonClick);
@@ -48,13 +50,14 @@ public class LaunchButtonControl : MonoBehaviour
             return;
         }
 
+        if (testModeControl._testMode) return;
         caseTime += Time.deltaTime;
         if (caseTime >= 0.05f)
         {
             caseTime = 0.0f;
             if(controlPhase != ControlPhase.WaitBallLaunch)
             {
-                TCPCon.SendData("GET:st1_processState:");
+                TCPCon.SendData("GET:st1_processState:0:");
             }
             var task = TCPReceiveData();
             if (await Task.WhenAny(task, Task.Delay(1000)) == task)
@@ -84,7 +87,7 @@ public class LaunchButtonControl : MonoBehaviour
             case ControlPhase.WaitPush:
                 if (_buttonClick || processState != 0)
                 {
-                    TCPCon.SendData("SET:st1_ballLaunch:");
+                    TCPCon.SendData("SET:st1_ballLaunch:0:");
                     controlPhase = ControlPhase.WaitBallLaunch;
                     launchButton.interactable = false;
                     _buttonClick = false;
@@ -92,7 +95,7 @@ public class LaunchButtonControl : MonoBehaviour
                 break;
 
             case ControlPhase.WaitBallLaunch:
-                TCPCon.SendData("SET:st1_ballLaunch:");
+                TCPCon.SendData("SET:st1_ballLaunch:0:");
                 if (processState != 0)
                 {
                     controlPhase = ControlPhase.WaitBallOut;

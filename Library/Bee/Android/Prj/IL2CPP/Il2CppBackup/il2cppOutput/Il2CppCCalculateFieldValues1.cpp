@@ -22152,18 +22152,18 @@ struct U3CMyGetResponseAsyncU3Ed__243_t7427A36447D90A8A67BEF18C253735062BE9A97F
 	ConfiguredTaskAwaiter_tF3E10D909F4AA06A6D1DBE0E1469605D65CF4987 ___U3CU3Eu__4_16;
 };
 
-// LaunchButtonControl/<Update>d__13
-struct U3CUpdateU3Ed__13_t7F4FB4E841448329E7A7E9A4D7B7D634CC30CC59 
+// LaunchButtonControl/<Update>d__14
+struct U3CUpdateU3Ed__14_t3FD3C4B4185E5BF21E017D495418481FB1459123 
 {
-	// System.Int32 LaunchButtonControl/<Update>d__13::<>1__state
+	// System.Int32 LaunchButtonControl/<Update>d__14::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder LaunchButtonControl/<Update>d__13::<>t__builder
+	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder LaunchButtonControl/<Update>d__14::<>t__builder
 	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder_1;
-	// LaunchButtonControl LaunchButtonControl/<Update>d__13::<>4__this
+	// LaunchButtonControl LaunchButtonControl/<Update>d__14::<>4__this
 	LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F* ___U3CU3E4__this_2;
-	// System.Threading.Tasks.Task LaunchButtonControl/<Update>d__13::<task>5__2
+	// System.Threading.Tasks.Task LaunchButtonControl/<Update>d__14::<task>5__2
 	Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* ___U3CtaskU3E5__2_3;
-	// System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> LaunchButtonControl/<Update>d__13::<>u__1
+	// System.Runtime.CompilerServices.TaskAwaiter`1<System.Threading.Tasks.Task> LaunchButtonControl/<Update>d__14::<>u__1
 	TaskAwaiter_1_t58AB811C02B57D5FC9B9743F62F501304B2053F7 ___U3CU3Eu__1_4;
 };
 
@@ -23586,16 +23586,16 @@ struct U3CProcessOperationU3Ed__24_tA9E46E01B0A6D159D5008FF6F6B2483CAC3D9786
 	ConfiguredTaskAwaiter_t6D4C5E6B82017ED33DAFA1EFC33B0EFBE3137618 ___U3CU3Eu__2_7;
 };
 
-// LaunchButtonControl/<TCPReceiveData>d__16
-struct U3CTCPReceiveDataU3Ed__16_tFF892F092A23E2A3B5F2067D3317413E7443AB9F 
+// LaunchButtonControl/<TCPReceiveData>d__17
+struct U3CTCPReceiveDataU3Ed__17_t7C60AA9C1F6B82938A03A8D341B449242E9C7C0B 
 {
-	// System.Int32 LaunchButtonControl/<TCPReceiveData>d__16::<>1__state
+	// System.Int32 LaunchButtonControl/<TCPReceiveData>d__17::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder LaunchButtonControl/<TCPReceiveData>d__16::<>t__builder
+	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder LaunchButtonControl/<TCPReceiveData>d__17::<>t__builder
 	AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06 ___U3CU3Et__builder_1;
-	// LaunchButtonControl LaunchButtonControl/<TCPReceiveData>d__16::<>4__this
+	// LaunchButtonControl LaunchButtonControl/<TCPReceiveData>d__17::<>4__this
 	LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F* ___U3CU3E4__this_2;
-	// System.Runtime.CompilerServices.TaskAwaiter`1<System.String[]> LaunchButtonControl/<TCPReceiveData>d__16::<>u__1
+	// System.Runtime.CompilerServices.TaskAwaiter`1<System.String[]> LaunchButtonControl/<TCPReceiveData>d__17::<>u__1
 	TaskAwaiter_1_t0E21B063BE3BF31D10B7AA9DBE4EE94929C1DD7A ___U3CU3Eu__1_3;
 };
 
@@ -24949,8 +24949,24 @@ struct KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88  : public MonoBehav
 	ToggleButton_tEC1FD6EE08DCCC8B827656F23E317D4965036CC1* ___toggleButton_1_18;
 	// ValueSlider KZ_TestMenu::valueSlider_1
 	ValueSlider_t49C8035F8C24AC87AAAFC0F7C45A8066EA01A4B5* ___valueSlider_1_19;
+	// ToggleButton KZ_TestMenu::toggleButton_2
+	ToggleButton_tEC1FD6EE08DCCC8B827656F23E317D4965036CC1* ___toggleButton_2_20;
+	// ValueSlider KZ_TestMenu::valueSlider_2
+	ValueSlider_t49C8035F8C24AC87AAAFC0F7C45A8066EA01A4B5* ___valueSlider_2_21;
+	// ToggleButton KZ_TestMenu::toggleButton_3
+	ToggleButton_tEC1FD6EE08DCCC8B827656F23E317D4965036CC1* ___toggleButton_3_22;
+	// ValueSlider KZ_TestMenu::valueSlider_3
+	ValueSlider_t49C8035F8C24AC87AAAFC0F7C45A8066EA01A4B5* ___valueSlider_3_23;
 	// TestModeCanvasControl KZ_TestMenu::canvasControl
-	TestModeCanvasControl_t471738FDD0C6F1387D80F7180C265795955B6737* ___canvasControl_20;
+	TestModeCanvasControl_t471738FDD0C6F1387D80F7180C265795955B6737* ___canvasControl_24;
+	// TCPConnection KZ_TestMenu::TCPCon
+	TCPConnection_t92DAABC53A04B736D124C05BBA878CC37DADBD96* ___TCPCon_25;
+	// System.Single KZ_TestMenu::TCPsendTime
+	float ___TCPsendTime_26;
+	// System.Boolean KZ_TestMenu::_TCPsend
+	bool ____TCPsend_27;
+	// System.Boolean KZ_TestMenu::_enabledTCP
+	bool ____enabledTCP_28;
 };
 
 // LaunchButtonControl
@@ -24962,22 +24978,24 @@ struct LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F  : public M
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___launchButton_5;
 	// TCPConnection LaunchButtonControl::TCPCon
 	TCPConnection_t92DAABC53A04B736D124C05BBA878CC37DADBD96* ___TCPCon_6;
+	// TestModeCanvasControl LaunchButtonControl::testModeControl
+	TestModeCanvasControl_t471738FDD0C6F1387D80F7180C265795955B6737* ___testModeControl_7;
 	// Configuration LaunchButtonControl::config
-	Configuration_tABB2DE2BA71E03BA9199DC7C97B7BD7F9505ADF2* ___config_7;
+	Configuration_tABB2DE2BA71E03BA9199DC7C97B7BD7F9505ADF2* ___config_8;
 	// System.Boolean LaunchButtonControl::_enabledTCP
-	bool ____enabledTCP_8;
+	bool ____enabledTCP_9;
 	// System.Boolean LaunchButtonControl::_enabledLaunch
-	bool ____enabledLaunch_9;
+	bool ____enabledLaunch_10;
 	// LaunchButtonControl/ControlPhase LaunchButtonControl::controlPhase
-	int32_t ___controlPhase_10;
+	int32_t ___controlPhase_11;
 	// System.Single LaunchButtonControl::caseTime
-	float ___caseTime_11;
+	float ___caseTime_12;
 	// System.Int32 LaunchButtonControl::processState
-	int32_t ___processState_12;
+	int32_t ___processState_13;
 	// System.Boolean LaunchButtonControl::_buttonClick
-	bool ____buttonClick_13;
+	bool ____buttonClick_14;
 	// System.String[] LaunchButtonControl::receiveTCP
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___receiveTCP_14;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___receiveTCP_15;
 };
 
 // MainControl
@@ -24991,6 +25009,8 @@ struct MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE  : public MonoBehav
 	bool ____TCPConnected_6;
 	// Configuration MainControl::config
 	Configuration_tABB2DE2BA71E03BA9199DC7C97B7BD7F9505ADF2* ___config_7;
+	// KZ_TestMenu MainControl::KZ_TestMenu
+	KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88* ___KZ_TestMenu_8;
 };
 
 // Unity.RenderStreaming.Samples.MultiplaySample
@@ -35361,9 +35381,9 @@ struct WebRequestStream_t731AE4852452BAA73C240BDC7DCBA42ADAD2BAAB_StaticFields
 
 // System.Net.HttpWebRequest/<MyGetResponseAsync>d__243
 
-// LaunchButtonControl/<Update>d__13
+// LaunchButtonControl/<Update>d__14
 
-// LaunchButtonControl/<Update>d__13
+// LaunchButtonControl/<Update>d__14
 
 // Mono.Net.Security.MobileAuthenticatedStream/<InnerRead>d__66
 
@@ -35615,9 +35635,9 @@ struct X509Certificate2ImplMono_t4566261D31F143C8CD222DB687625E5246BFD240_Static
 
 // Mono.Net.Security.AsyncProtocolRequest/<ProcessOperation>d__24
 
-// LaunchButtonControl/<TCPReceiveData>d__16
+// LaunchButtonControl/<TCPReceiveData>d__17
 
-// LaunchButtonControl/<TCPReceiveData>d__16
+// LaunchButtonControl/<TCPReceiveData>d__17
 
 // Mono.Net.Security.MobileAuthenticatedStream/<InnerWrite>d__67
 
@@ -41455,24 +41475,24 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5433[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5434[8] = 
 {
 	static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ___name_0)),static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ____terminal_1)),static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ___parent_2)),static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ___Items_3)),static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ___operation_4)),static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ___process_5)),static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ___processInit_6)),static_cast<int32_t>(offsetof(ItemSlot_t02FCD0061CC21E3649689FEFF1B6ED62F3B45487, ___processDeinit_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5435[17] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5435[25] = 
 {
-	static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_Input_4)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_Motor_5)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_Solenoid_6)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_LED_7)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_DataMode_8)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_ServiceSettings_9)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TestMode_10)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MAIN_DataMode_11)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MAIN_ServiceSettings_12)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MAIN_TestMode_13)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___StationMenu_14)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MainMenu_15)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___GameMode_16)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___OperationMode_17)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___toggleButton_1_18)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___valueSlider_1_19)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___canvasControl_20)),};
+	static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_Input_4)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_Motor_5)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_Solenoid_6)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TM_LED_7)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_DataMode_8)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_ServiceSettings_9)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___ST_TestMode_10)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MAIN_DataMode_11)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MAIN_ServiceSettings_12)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MAIN_TestMode_13)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___StationMenu_14)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___MainMenu_15)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___GameMode_16)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___OperationMode_17)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___toggleButton_1_18)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___valueSlider_1_19)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___toggleButton_2_20)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___valueSlider_2_21)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___toggleButton_3_22)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___valueSlider_3_23)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___canvasControl_24)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___TCPCon_25)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ___TCPsendTime_26)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ____TCPsend_27)),static_cast<int32_t>(offsetof(KZ_TestMenu_t6933CCC9C32A21772B39361596C35310288B7C88, ____enabledTCP_28)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5436[5] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5437[5] = 
 {
-	static_cast<int32_t>(offsetof(U3CUpdateU3Ed__13_t7F4FB4E841448329E7A7E9A4D7B7D634CC30CC59, ___U3CU3E1__state_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__13_t7F4FB4E841448329E7A7E9A4D7B7D634CC30CC59, ___U3CU3Et__builder_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__13_t7F4FB4E841448329E7A7E9A4D7B7D634CC30CC59, ___U3CU3E4__this_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__13_t7F4FB4E841448329E7A7E9A4D7B7D634CC30CC59, ___U3CtaskU3E5__2_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__13_t7F4FB4E841448329E7A7E9A4D7B7D634CC30CC59, ___U3CU3Eu__1_4)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
+	static_cast<int32_t>(offsetof(U3CUpdateU3Ed__14_t3FD3C4B4185E5BF21E017D495418481FB1459123, ___U3CU3E1__state_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__14_t3FD3C4B4185E5BF21E017D495418481FB1459123, ___U3CU3Et__builder_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__14_t3FD3C4B4185E5BF21E017D495418481FB1459123, ___U3CU3E4__this_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__14_t3FD3C4B4185E5BF21E017D495418481FB1459123, ___U3CtaskU3E5__2_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CUpdateU3Ed__14_t3FD3C4B4185E5BF21E017D495418481FB1459123, ___U3CU3Eu__1_4)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5438[4] = 
 {
-	static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__16_tFF892F092A23E2A3B5F2067D3317413E7443AB9F, ___U3CU3E1__state_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__16_tFF892F092A23E2A3B5F2067D3317413E7443AB9F, ___U3CU3Et__builder_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__16_tFF892F092A23E2A3B5F2067D3317413E7443AB9F, ___U3CU3E4__this_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__16_tFF892F092A23E2A3B5F2067D3317413E7443AB9F, ___U3CU3Eu__1_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5439[11] = 
+	static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__17_t7C60AA9C1F6B82938A03A8D341B449242E9C7C0B, ___U3CU3E1__state_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__17_t7C60AA9C1F6B82938A03A8D341B449242E9C7C0B, ___U3CU3Et__builder_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__17_t7C60AA9C1F6B82938A03A8D341B449242E9C7C0B, ___U3CU3E4__this_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CTCPReceiveDataU3Ed__17_t7C60AA9C1F6B82938A03A8D341B449242E9C7C0B, ___U3CU3Eu__1_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5439[12] = 
 {
-	static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___ButtonObject_4)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___launchButton_5)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___TCPCon_6)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___config_7)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ____enabledTCP_8)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ____enabledLaunch_9)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___controlPhase_10)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___caseTime_11)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___processState_12)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ____buttonClick_13)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___receiveTCP_14)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5440[4] = 
+	static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___ButtonObject_4)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___launchButton_5)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___TCPCon_6)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___testModeControl_7)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___config_8)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ____enabledTCP_9)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ____enabledLaunch_10)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___controlPhase_11)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___caseTime_12)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___processState_13)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ____buttonClick_14)),static_cast<int32_t>(offsetof(LaunchButtonControl_t66F4CBF5C316E91367A8D9D562B4E47BA066261F, ___receiveTCP_15)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5440[5] = 
 {
-	static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ___TCPcon_4)),static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ___launchButtonControl_5)),static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ____TCPConnected_6)),static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ___config_7)),};
+	static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ___TCPcon_4)),static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ___launchButtonControl_5)),static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ____TCPConnected_6)),static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ___config_7)),static_cast<int32_t>(offsetof(MainControl_tB6B2F9693976F8BA95CCC3E48F7C4B002C2B0DDE, ___KZ_TestMenu_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5441[6] = 
 {
 	static_cast<int32_t>(offsetof(TCPClient_t173087DF11AF8C1A74088363BE85884F43A3D6A3, ___m_ipAddress_4)),static_cast<int32_t>(offsetof(TCPClient_t173087DF11AF8C1A74088363BE85884F43A3D6A3, ___m_port_5)),static_cast<int32_t>(offsetof(TCPClient_t173087DF11AF8C1A74088363BE85884F43A3D6A3, ___m_tcpClient_6)),static_cast<int32_t>(offsetof(TCPClient_t173087DF11AF8C1A74088363BE85884F43A3D6A3, ___m_networkStream_7)),static_cast<int32_t>(offsetof(TCPClient_t173087DF11AF8C1A74088363BE85884F43A3D6A3, ___m_isConnection_8)),static_cast<int32_t>(offsetof(TCPClient_t173087DF11AF8C1A74088363BE85884F43A3D6A3, ___m_message_9)),};

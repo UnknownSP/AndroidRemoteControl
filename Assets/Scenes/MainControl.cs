@@ -8,10 +8,12 @@ public class MainControl : MonoBehaviour
     [SerializeField] private LaunchButtonControl launchButtonControl;
     private bool _TCPConnected = false;
     private Configuration config;
+    private KZ_TestMenu KZ_TestMenu;
     // Start is called before the first frame update
     void Start()
     {
         config = GameObject.Find("Configuration").GetComponent<Configuration>();
+        KZ_TestMenu = GameObject.Find("MainCamera").GetComponent<KZ_TestMenu>();
 
         if (config._useTCP)
         {
@@ -19,6 +21,7 @@ public class MainControl : MonoBehaviour
             {
                 _TCPConnected = true;
                 launchButtonControl.setTCPConnection(TCPcon);
+                KZ_TestMenu.setTCPConnection(TCPcon);
             }
         }
         launchButtonControl._enabledLaunch = true;

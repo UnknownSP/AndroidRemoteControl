@@ -45,7 +45,16 @@ public class KZ_TestMenu : MonoBehaviour
 
     ToggleButton toggleButton_1;
     ValueSlider valueSlider_1;
+    ToggleButton toggleButton_2;
+    ValueSlider valueSlider_2;
+    ToggleButton toggleButton_3;
+    ValueSlider valueSlider_3;
     TestModeCanvasControl canvasControl;
+    TCPConnection TCPCon;
+
+    float TCPsendTime = 0.0f;
+    bool _TCPsend = false;
+    bool _enabledTCP = false;
 
     // Start is called before the first frame update
     void Start()
@@ -54,14 +63,31 @@ public class KZ_TestMenu : MonoBehaviour
         canvasControl = GameObject.Find("MainCamera").GetComponent<TestModeCanvasControl>();
         toggleButton_1 = GameObject.Find("ToggleButton_1").GetComponent<ToggleButton>();
         valueSlider_1 = GameObject.Find("ValueSlider_1").GetComponent<ValueSlider>();
+        toggleButton_2 = GameObject.Find("ToggleButton_2").GetComponent<ToggleButton>();
+        valueSlider_2 = GameObject.Find("ValueSlider_2").GetComponent<ValueSlider>();
+        toggleButton_3 = GameObject.Find("ToggleButton_3").GetComponent<ToggleButton>();
+        valueSlider_3 = GameObject.Find("ValueSlider_3").GetComponent<ValueSlider>();
         toggleButton_1.SetActive(false);
         valueSlider_1.SetActive(false);
+        toggleButton_2.SetActive(false);
+        valueSlider_2.SetActive(false);
+        toggleButton_3.SetActive(false);
+        valueSlider_3.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        TCPsendTime += Time.deltaTime;
+        if (TCPsendTime > 0.05f)
+        {
+            _TCPsend = true;
+            TCPsendTime = 0.05f;
+        }
+        if (!_TCPsend)
+        {
+            TCPsendTime = 0.0f;
+        }
     }
 
     void SetOparationMode()
@@ -216,19 +242,73 @@ public class KZ_TestMenu : MonoBehaviour
     public void ST_TM_LED_Init()
     {
         toggleButton_1.SetPosition(700);
-        valueSlider_1.SetPosition(460);
+        valueSlider_1.SetPosition(470);
         toggleButton_1.SetText("1st LED");
-        valueSlider_1.SetText("Brightness");
+        valueSlider_1.SetText("  Brightness");
         toggleButton_1.SetActive(true);
         valueSlider_1.SetActive(true);
+        toggleButton_2.SetPosition(300);
+        valueSlider_2.SetPosition(70);
+        toggleButton_2.SetText("2nd LED");
+        valueSlider_2.SetText("  Brightness");
+        toggleButton_2.SetActive(true);
+        valueSlider_2.SetActive(true);
+        toggleButton_3.SetPosition(-100);
+        valueSlider_3.SetPosition(-330);
+        toggleButton_3.SetText("3rd LED");
+        valueSlider_3.SetText("  Brightness");
+        toggleButton_3.SetActive(true);
+        valueSlider_3.SetActive(true);
     }
     public void ST_TM_LED_Deinit()
     {
         toggleButton_1.SetActive(false);
         valueSlider_1.SetActive(false);
+        toggleButton_2.SetActive(false);
+        valueSlider_2.SetActive(false);
+        toggleButton_3.SetActive(false);
+        valueSlider_3.SetActive(false);
+        TCPCon.SendData("SET:st1_ResetTestMode:0:");
     }
     public void ST_TM_LED_Process()
     {
+        if (!_TCPsend || !_enabledTCP) return;
+        int value1st;
+        int value2nd;
+        int value3rd;
 
+        if (toggleButton_1.value)
+        {
+            value1st = (int)(valueSlider_1.value * 100.0f);
+        }
+        else
+        {
+            value1st = 0;
+        }
+        if (toggleButton_2.value)
+        {
+            value2nd = (int)(valueSlider_2.value * 100.0f);
+        }
+        else
+        {
+            value2nd = 0;
+        }
+        if (toggleButton_3.value)
+        {
+            value3rd = (int)(valueSlider_3.value * 100.0f);
+        }
+        else
+        {
+            value3rd = 0;
+        }
+        TCPCon.SendData("SET:st1_1stLED:" +value1st + ":SET:st1_2ndLED:" +value2nd + ":SET:st1_3rdLED:"+value3rd+":");
+
+        _TCPsend = false;
+    }
+
+    public void setTCPConnection(TCPConnection con)
+    {
+        TCPCon = con;
+        _enabledTCP = true;
     }
 }
