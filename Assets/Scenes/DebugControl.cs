@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//デバッグキャンバスの処理
 public class DebugControl : MonoBehaviour
 {
     GameObject CanvasObject;
     TextMeshProUGUI debugText;
     Button debugButton;
     string text;
-    // Start is called before the first frame update
+
     void Start()
     {
         CanvasObject = GameObject.Find("DebugCanvas");
@@ -21,7 +22,6 @@ public class DebugControl : MonoBehaviour
         text = "";
     }
 
-    // Update is called once per frame
     void Update()
     {
         debugText.text = text;
@@ -32,6 +32,7 @@ public class DebugControl : MonoBehaviour
         CanvasObject.SetActive(_active);
     }
 
+    //ログ追加
     public void AddLog(string str)
     {
         text += str + "\n";

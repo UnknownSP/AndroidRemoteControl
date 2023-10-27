@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//テストモード関係の処理を行う
 public class TestModeCanvasControl : MonoBehaviour
 {
     private Configuration config;
@@ -48,9 +49,9 @@ public class TestModeCanvasControl : MonoBehaviour
     BackButtonControl backButton;
     int ItemSlotNum = 14;
 
-    // Start is called before the first frame update
     void Start()
     {
+        //オブジェクトとコンポーネント割り当て
         config = GameObject.Find("Configuration").GetComponent<Configuration>();
         MainCanvas = GameObject.Find("MainCanvas");
         TestModeCanvas_1 = GameObject.Find("TestModeCanvas_1");
@@ -75,48 +76,58 @@ public class TestModeCanvasControl : MonoBehaviour
         displayCanvas = DisplayCanvas.MainCanvas;
     }
 
-    // Update is called once per frame
     void Update()
     {
         deltaTime = Time.deltaTime;
+        //テストモードへ移行中の場合
         if (_moveTestMode)
         {
             moveTMTime += deltaTime;
+            //キャンバスの移動処理が完了した場合
             if (CanvasMove_TestMode(moveTMTime))
             {
                 moveTMTime = 0.0f;
                 _moveTestMode = false;
                 displayCanvas = DisplayCanvas.TestModeCanvas_1;
                 _canvasMoving = false;
+                //表示中のアイテムを変更
                 displayItemSlot = targetItemSlot;
+                //アイテムボタン有効
                 EnableItemButton(displayItemSlot);
                 touchHandler.ResetTap();
                 backButton.Enable();
+                //現在のテストモード階層をセット
                 SetPWD(displayItemSlot);
             }
         }
+        //ゲームモードへ移行中の場合
         if (_moveGameMode)
         {
             moveGMTime += deltaTime;
+            //キャンバスの移動処理が完了した場合
             if (CanvasMove_GameMode(moveGMTime))
             {
                 moveGMTime = 0.0f;
                 _moveGameMode = false;
                 displayCanvas = DisplayCanvas.MainCanvas;
                 _canvasMoving = false;
+                //全てのアイテムを非表示
                 DisableAllItemSlot();
                 backButton.Disable();
                 backButton.SetActive(false);
                 pwdText.text = "";
             }
         }
+        //キャンバスが右方向へ移動の場合(より深い階層へ移動する場合)
         if (_moveCanvasRight)
         {
             moveTime += deltaTime;
+            //キャンバスの移動処理が完了した場合
             if (CanvasMove(moveTime, displayCanvas, Direction.Right))
             {
                 moveTime = 0.0f;
                 _moveCanvasRight = false;
+                //1つ前の階層のアイテムを非表示
                 DisableCanvasItemSlot(displayCanvas);
                 if (displayCanvas == DisplayCanvas.TestModeCanvas_1)
                 {
@@ -127,19 +138,26 @@ public class TestModeCanvasControl : MonoBehaviour
                     displayCanvas = DisplayCanvas.TestModeCanvas_1;
                 }
                 _canvasMoving = false;
+                //表示中のアイテムを変更
                 displayItemSlot = targetItemSlot;
-                if(!_processItem) EnableItemButton(displayItemSlot);
+                //処理アイテムでない場合アイテムボタン有効
+                if (!_processItem) EnableItemButton(displayItemSlot);
+                //戻るボタンも有効
                 backButton.Enable();
+                //現在のテストモード階層をセット
                 SetPWD(displayItemSlot);
             }
         }
+        //キャンバスが左方向へ移動の場合(より浅い階層へ移動する場合)
         if (_moveCanvasLeft)
         {
             moveTime += deltaTime;
+            //キャンバスの移動処理が完了した場合
             if (CanvasMove(moveTime, displayCanvas, Direction.Left))
             {
                 moveTime = 0.0f;
                 _moveCanvasLeft = false;
+                //1つ前の階層のアイテムスロットを非表示
                 if (!_processItem) DisableCanvasItemSlot(displayCanvas);
                 if (displayCanvas == DisplayCanvas.TestModeCanvas_1)
                 {
@@ -150,9 +168,12 @@ public class TestModeCanvasControl : MonoBehaviour
                     displayCanvas = DisplayCanvas.TestModeCanvas_1;
                 }
                 _canvasMoving = false;
+                //表示中のアイテムスロットを変更
                 displayItemSlot = targetItemSlot;
                 EnableItemButton(displayItemSlot);
+                //戻るボタンも有効
                 backButton.Enable();
+                //現在のテストモード階層をセット
                 SetPWD(displayItemSlot);
             }
         }
@@ -172,7 +193,7 @@ public class TestModeCanvasControl : MonoBehaviour
                         if (j == i) continue;
                         ItemButton[(int)displayCanvas, j].Disable();
                     }
-                    //タップされた先が処理スロットの場合
+                    //タップされた先が処理アイテムの場合
                     if (displayItemSlot.Items[i]._terminal)
                     {
                         //ゲームモードボタンは例外
@@ -183,16 +204,21 @@ public class TestModeCanvasControl : MonoBehaviour
                             touchHandler.ResetTap();
                             break;
                         }
+                        //次アイテムをセット
                         targetItemSlot = displayItemSlot.Items[i];
+                        //次アイテムの初期化処理
                         targetItemSlot.processInit();
+                        //次アイテムが処理アイテムであるフラグを立てる
                         _processItem = true;
                     }
                     else
                     {
+                        //処理アイテムでない場合は通常通り次のアイテムをセット
                         targetItemSlot = displayItemSlot.Items[i];
                         SetNextItemSlot(targetItemSlot);
                     }
                     moveTime = 0.0f;
+                    //キャンバスの右移動
                     _moveCanvasRight = true;
                     _canvasMoving = true;
                     CanvasSet(displayCanvas, Direction.Right);
@@ -202,20 +228,25 @@ public class TestModeCanvasControl : MonoBehaviour
                 }
                 else if (ItemButton[(int)displayCanvas, i]._longtapped)
                 {
-
+                    //ロングタップされた場合の処理は今後追加
+                    //iPhoneのように対象の次階層を少し小さく表示
                 }
             }
         }
 
+        //処理アイテムの場合
         if (_processItem && !_canvasMoving)
         {
             displayItemSlot.process();
         }
 
+        //戻るボタンが押された場合
         if (backButton._tapped && !_canvasMoving)
         {
+            //今階層の親が存在する場合
             if (displayItemSlot.parent != null)
             {
+                //親階層をセット
                 targetItemSlot = KZ_TestMenu.GetParent(displayItemSlot.parent);
                 SetNextItemSlot(targetItemSlot);
                 moveTime = 0.0f;
@@ -227,6 +258,7 @@ public class TestModeCanvasControl : MonoBehaviour
             }
             else
             {
+                //今階層の親が存在しない場合はゲームモードへ
                 GMButtonClick();
             }
             //Debug.Log(displayItemSlot.name);
@@ -237,6 +269,7 @@ public class TestModeCanvasControl : MonoBehaviour
         }
     }
 
+    //テストモードボタンが押された場合
     void TMButtonClick()
     {
         if(!_canvasMoving && displayCanvas == DisplayCanvas.MainCanvas)
@@ -254,6 +287,7 @@ public class TestModeCanvasControl : MonoBehaviour
         }
     }
 
+    //ゲームモードボタンが押された場合
     public void GMButtonClick()
     {
         if (!_canvasMoving && (displayCanvas == DisplayCanvas.TestModeCanvas_1 || displayCanvas == DisplayCanvas.TestModeCanvas_2))
@@ -346,6 +380,7 @@ public class TestModeCanvasControl : MonoBehaviour
         }
     }
 
+    //次アイテムのセット
     void SetNextItemSlot(ItemSlot item)
     {
         if (displayCanvas == DisplayCanvas.TestModeCanvas_1)
@@ -411,9 +446,11 @@ public class TestModeCanvasControl : MonoBehaviour
         }
     }
 
+    //キャンバスの移動処理
     bool CanvasMove(float nowTime, DisplayCanvas nowCanvas, Direction direction)
     {
         float timeDiffRatio = (config.canvasMovingTime - nowTime) / config.canvasMovingTime;
+        //キャンバス移動速度カーブの定義
         float movingRatio = 1.0f - timeDiffRatio * timeDiffRatio * timeDiffRatio * timeDiffRatio;
         if (timeDiffRatio > 0.0f)
         {
@@ -446,6 +483,7 @@ public class TestModeCanvasControl : MonoBehaviour
         return false;
     }
 
+    //テストモード移行時のキャンバスの移動処理
     bool CanvasMove_TestMode(float nowTime)
     {
         float timeDiffRatio = (config.canvasMovingTime - nowTime) / config.canvasMovingTime;
@@ -466,6 +504,7 @@ public class TestModeCanvasControl : MonoBehaviour
         return false;
     }
 
+    //ゲームモード移行時のキャンバスの移動処理
     bool CanvasMove_GameMode(float nowTime)
     {
         float timeDiffRatio = (config.canvasMovingTime - nowTime) / config.canvasMovingTime;
@@ -497,6 +536,7 @@ public class TestModeCanvasControl : MonoBehaviour
         return false;
     }
 
+    //現在の階層をセット
     private void SetPWD(ItemSlot display)
     {
         int count = 1;

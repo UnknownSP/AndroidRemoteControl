@@ -9,6 +9,7 @@ public class ItemOperation
     public Action process;
 }
 
+//アイテムスロットの定義
 public class ItemSlot
 {
     public string name;
@@ -21,6 +22,7 @@ public class ItemSlot
     public Action processDeinit;
 }
 
+//KAZAAANのテストメニューの定義
 public class KZ_TestMenu : MonoBehaviour
 {
     //4th
@@ -56,9 +58,10 @@ public class KZ_TestMenu : MonoBehaviour
     bool _TCPsend = false;
     bool _enabledTCP = false;
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        //初期化
         SetOparationMode();
         canvasControl = GameObject.Find("MainCamera").GetComponent<TestModeCanvasControl>();
         toggleButton_1 = GameObject.Find("ToggleButton_1").GetComponent<ToggleButton>();
@@ -75,10 +78,10 @@ public class KZ_TestMenu : MonoBehaviour
         valueSlider_3.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         TCPsendTime += Time.deltaTime;
+        //TCP送信タイミングかどうか
         if (TCPsendTime > 0.05f)
         {
             _TCPsend = true;
@@ -90,6 +93,8 @@ public class KZ_TestMenu : MonoBehaviour
         }
     }
 
+    //メニューの定義
+    //未実装多数
     void SetOparationMode()
     {
         //4th
@@ -204,6 +209,7 @@ public class KZ_TestMenu : MonoBehaviour
         };
     }
 
+    //親階層の入手
     public ItemSlot GetParent(string name)
     {
         switch (name)
@@ -221,6 +227,8 @@ public class KZ_TestMenu : MonoBehaviour
         }
         return OperationMode;
     }
+
+    //現在の階層のPWDを入手
     public List<string> GetPWD(ItemSlot display)
     {
         List<string> pwd = new List<string>();
@@ -239,6 +247,7 @@ public class KZ_TestMenu : MonoBehaviour
         return pwd;
     }
 
+    //ステーションテストモードのLEDテストの初期化処理
     public void ST_TM_LED_Init()
     {
         toggleButton_1.SetPosition(700);
@@ -260,6 +269,7 @@ public class KZ_TestMenu : MonoBehaviour
         toggleButton_3.SetActive(true);
         valueSlider_3.SetActive(true);
     }
+    //ステーションテストモードのLEDテストの終了処理
     public void ST_TM_LED_Deinit()
     {
         toggleButton_1.SetActive(false);
@@ -270,6 +280,7 @@ public class KZ_TestMenu : MonoBehaviour
         valueSlider_3.SetActive(false);
         TCPCon.SendData("SET:st1_ResetTestMode:0:");
     }
+    //ステーションテストモードのLEDテストのメイン処理
     public void ST_TM_LED_Process()
     {
         if (!_TCPsend || !_enabledTCP) return;
@@ -301,6 +312,7 @@ public class KZ_TestMenu : MonoBehaviour
         {
             value3rd = 0;
         }
+        //データをTCPでサーバに送信
         TCPCon.SendData("SET:st1_1stLED:" +value1st + ":SET:st1_2ndLED:" +value2nd + ":SET:st1_3rdLED:"+value3rd+":");
 
         _TCPsend = false;

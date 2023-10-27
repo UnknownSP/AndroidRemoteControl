@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Threading;
 using System.Threading.Tasks;
 
+//発射ボタンの処理
 public class LaunchButtonControl : MonoBehaviour
 {
     GameObject ButtonObject;
@@ -27,20 +28,21 @@ public class LaunchButtonControl : MonoBehaviour
     bool _buttonClick = false;
     string[] receiveTCP = new string[] { };
 
-    // Start is called before the first frame update
     void Start()
     {
+        //オブジェクトとコンポーネントのセット
         config = GameObject.Find("Configuration").GetComponent<Configuration>();
         ButtonObject = GameObject.Find("LaunchButton");
         testModeControl = GameObject.Find("MainCamera").GetComponent<TestModeCanvasControl>();
         launchButton = ButtonObject.GetComponent<Button>();
         launchButton.interactable = false;
+        //発射ボタンが押された場合のリスナーを追加
         launchButton.onClick.AddListener(buttonClick);
     }
 
-    // Update is called once per frame
     async void Update()
     {
+        //TCP使えない場合は処理しない
         if (!_enabledTCP || !config._useTCP) return;
         if (!_enabledLaunch)
         {
@@ -50,8 +52,10 @@ public class LaunchButtonControl : MonoBehaviour
             return;
         }
 
+        //テストモードの場合は処理しない
         if (testModeControl._testMode) return;
         caseTime += Time.deltaTime;
+        //0.05秒おきにTCP通信
         if (caseTime >= 0.05f)
         {
             caseTime = 0.0f;
@@ -60,6 +64,7 @@ public class LaunchButtonControl : MonoBehaviour
                 TCPCon.SendData("GET:st1_processState:0:");
             }
             var task = TCPReceiveData();
+            //受信処理が一定以上かかっている場合はエラーにする
             if (await Task.WhenAny(task, Task.Delay(1000)) == task)
             {
                 if (receiveTCP[0].Contains("st1_processState"))
@@ -75,6 +80,7 @@ public class LaunchButtonControl : MonoBehaviour
         }
         switch (controlPhase)
         {
+            //有効化待ち
             case ControlPhase.WaitEnable:
                 launchButton.interactable = false;
                 if(processState == 0)
@@ -84,6 +90,7 @@ public class LaunchButtonControl : MonoBehaviour
                 }   
                 break;
 
+            //有効化してボタンが押された場合もしくは筐体についてるボタンによって発射された場合
             case ControlPhase.WaitPush:
                 if (_buttonClick || processState != 0)
                 {
@@ -94,6 +101,7 @@ public class LaunchButtonControl : MonoBehaviour
                 }
                 break;
 
+            //ボール発射待ち
             case ControlPhase.WaitBallLaunch:
                 TCPCon.SendData("SET:st1_ballLaunch:0:");
                 if (processState != 0)
@@ -102,6 +110,7 @@ public class LaunchButtonControl : MonoBehaviour
                 }
                 break;
 
+            //ボールアウト待ち
             case ControlPhase.WaitBallOut:
                 if (processState == 0)
                 {

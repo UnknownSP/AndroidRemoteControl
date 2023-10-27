@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//トグルボタンの定義
+//ライクiPhoneな感じ
 public class ToggleButton : MonoBehaviour
 {
     private Image backGround;
@@ -26,7 +28,6 @@ public class ToggleButton : MonoBehaviour
     private bool _startSwitch = false;
     private bool _enable = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         backGroundObj = transform.Find("Background").gameObject;
@@ -45,15 +46,17 @@ public class ToggleButton : MonoBehaviour
         //----
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        //ボタンが押下された場合描画処理
         if (_startSwitch)
         {
             moveTime += Time.deltaTime;
             float timeRatio = moveTime / TOGGLE_DURATION;
             if (timeRatio < 1.0f)
             {
+                //色の遷移
                 if (value)
                 {
                     backGround.color = Color.Lerp(BackGround_OffColor, BackGround_OnColor, timeRatio);
@@ -62,6 +65,7 @@ public class ToggleButton : MonoBehaviour
                 {
                     backGround.color = Color.Lerp(BackGround_OnColor, BackGround_OffColor, timeRatio);
                 }
+                //ボタン部分の左右移動
                 toggle.localPosition = new Vector3((value ? -1.0f : 1.0f) * togglePosX + (value ? 2.0f : -2.0f) * togglePosX * MoveFunc(timeRatio), 0,0);
             }
             else

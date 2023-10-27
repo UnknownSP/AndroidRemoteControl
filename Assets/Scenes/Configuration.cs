@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//全体の設定用
 public class Configuration : MonoBehaviour
 {
     public bool _useTCP = true;
@@ -25,13 +26,12 @@ public class Configuration : MonoBehaviour
     public float BackButtonHeight = 100.0f;
     public Color BackButtonNormalColor = new Color32(47, 157, 255, 255);
     public Color BackButtonPressedColor = new Color32(28, 90, 144, 255);
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//タッチ処理を行う
+//今のところ判定できるのは．
+//押下されているかどうか・タップ・ロングタップ・左右フリック
 public class TouchHandler : MonoBehaviour
 {
     private Configuration config;
@@ -19,7 +22,7 @@ public class TouchHandler : MonoBehaviour
     private Vector2 minPosition;
     private float tapTime = 0.0f;
     DebugControl debugControl;
-    // Start is called before the first frame update
+
     void Start()
     {
         inputSettings = ScriptableObject.CreateInstance("InputSettings") as InputSettings;
@@ -31,11 +34,14 @@ public class TouchHandler : MonoBehaviour
         debugControl = GameObject.Find("MainCamera").GetComponent<DebugControl>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //タッチ情報を取得
         var touchInput = Touchscreen.current;
+        //1つ目のタッチ情報のみを処理
         var primaryTouch = touchInput.touches[0];
+
+        //タッチされた場合
         if (primaryTouch.press.wasPressedThisFrame)
         {
             _tapped = false;
@@ -49,12 +55,14 @@ public class TouchHandler : MonoBehaviour
             position = primaryTouch.position.ReadValue() - new Vector2(config.displayWidth / 2.0f, config.displayHeight / 2.0f);
             startposition = primaryTouch.startPosition.ReadValue() - new Vector2(config.displayWidth / 2.0f, config.displayHeight / 2.0f);
         }
+        //タッチしてから離された場合
         if (primaryTouch.press.wasReleasedThisFrame)
         {
             _pressed = false;
             _tapmoved = false;
             _longtapped = false;
             //フリック判定
+            //ある程度横方向に移動しており時間が短ければフリック判定
             if (tapTime <= config.flickTime && Mathf.Abs(maxPosition.y - minPosition.y) <= config.flickMoveY && Mathf.Abs(maxPosition.x - minPosition.x) >= config.flickMoveX)
             {
                 if (primaryTouch.startPosition.ReadValue().x <= config.flickStartPosL)
@@ -80,6 +88,7 @@ public class TouchHandler : MonoBehaviour
         {
             tapTime += Time.deltaTime;
             position = primaryTouch.position.ReadValue() - new Vector2(config.displayWidth/2.0f,config.displayHeight/2.0f);
+            //押されている間に通った場所の最大値最小値を記録
             if (maxPosition.x <= primaryTouch.position.ReadValue().x) maxPosition.x = primaryTouch.position.ReadValue().x;
             if (minPosition.x >= primaryTouch.position.ReadValue().x) minPosition.x = primaryTouch.position.ReadValue().x;
             if (maxPosition.y <= primaryTouch.position.ReadValue().y) maxPosition.y = primaryTouch.position.ReadValue().y;

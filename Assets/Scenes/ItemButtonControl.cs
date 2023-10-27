@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//アイテムボタンの処理
 public class ItemButtonControl : MonoBehaviour
 {
     GameObject imageObj;
@@ -24,7 +25,7 @@ public class ItemButtonControl : MonoBehaviour
     bool _dontCarePressed = false;
     TestModeCanvasControl canvasControl;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         config = GameObject.Find("Configuration").GetComponent<Configuration>();
@@ -35,6 +36,7 @@ public class ItemButtonControl : MonoBehaviour
         touchHandler = GameObject.Find("MainCamera").GetComponent<TouchHandler>();
         canvasControl = GameObject.Find("MainCamera").GetComponent<TestModeCanvasControl>();
         UIPosition = transform.localPosition;
+        //自身のボタンの位置に対して反応すべき場所を設定
         touchRangeMin.x = UIPosition.x - (config.ItemButtonWidth / 2.0f) + config.ItemButtonTouchOffset;
         touchRangeMax.x = UIPosition.x + (config.ItemButtonWidth / 2.0f) - config.ItemButtonTouchOffset;
         touchRangeMin.y = UIPosition.y - (config.ItemButtonHeight / 2.0f) + config.ItemButtonTouchOffset;
@@ -48,10 +50,12 @@ public class ItemButtonControl : MonoBehaviour
         //-------
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!_isActive && canvasControl._canvasMoving) return;
+        //一回分押された処理をスルー
+        //longtap処理を行った場合のために追加
+        //押された回数を見て判断するのがより良いかも
         if (_dontCareOneTime)
         {
             if (!touchHandler._pressed)
@@ -73,6 +77,7 @@ public class ItemButtonControl : MonoBehaviour
             return;
         }
         if (!_enable) return;
+        //タッチ開始位置と終了位置が自身のボタンの場所である場合
         if (OnTouchPosition(touchHandler.position) && OnTouchPosition(touchHandler.startposition))
         {
             if (touchHandler._pressed)
@@ -133,6 +138,7 @@ public class ItemButtonControl : MonoBehaviour
         _dontCareOneTime = true;
     }
 
+    //タッチ判定とする場所かどうか判断
     bool OnTouchPosition(Vector2 pos)
     {
         if (pos.x >= touchRangeMin.x && pos.x <= touchRangeMax.x && pos.y >= touchRangeMin.y && pos.y <= touchRangeMax.y)

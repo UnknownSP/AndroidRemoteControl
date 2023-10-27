@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//スライダの処理
 public class ValueSlider : MonoBehaviour
 {
     GameObject sliderObj;
@@ -17,7 +18,7 @@ public class ValueSlider : MonoBehaviour
     public float value = 0.0f;
 
     private const float LOCALPOSITION_X = 0.0f;
-    // Start is called before the first frame update
+
     void Start()
     {
         sliderObj = transform.Find("Slider").gameObject;
@@ -30,7 +31,6 @@ public class ValueSlider : MonoBehaviour
         SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_enable)

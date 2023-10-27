@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//戻るボタンの処理
 public class BackButtonControl : MonoBehaviour
 {
     GameObject textObj;
@@ -21,7 +22,6 @@ public class BackButtonControl : MonoBehaviour
     bool _dontCarePressed = false;
     TestModeCanvasControl canvasControl;
 
-    // Start is called before the first frame update
     void Start()
     {
         config = GameObject.Find("Configuration").GetComponent<Configuration>();
@@ -41,10 +41,12 @@ public class BackButtonControl : MonoBehaviour
         //-------
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!_isActive && canvasControl._canvasMoving) return;
+        //一回分押された処理をスルー
+        //longtap処理を行った場合のために追加
+        //押された回数を見て判断するのがより良いかも
         if (_dontCareOneTime)
         {
             if (!touchHandler._pressed)
@@ -64,6 +66,7 @@ public class BackButtonControl : MonoBehaviour
             return;
         }
         if (!_enable) return;
+        //タッチ開始位置と終了位置が自身のボタンの場所である場合
         if (OnTouchPosition(touchHandler.position) && OnTouchPosition(touchHandler.startposition))
         {
             if (touchHandler._pressed)
@@ -121,6 +124,7 @@ public class BackButtonControl : MonoBehaviour
         _dontCareOneTime = true;
     }
 
+    //タッチ判定とする場所かどうか判断
     bool OnTouchPosition(Vector2 pos)
     {
         if (pos.x >= touchRangeMin.x && pos.x <= touchRangeMax.x && pos.y >= touchRangeMin.y && pos.y <= touchRangeMax.y)

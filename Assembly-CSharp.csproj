@@ -59,7 +59,6 @@
     <Compile Include="Assets/Scenes/TCPConnection.cs" />
     <Compile Include="Assets/Scenes/Configuration.cs" />
     <Compile Include="Assets/Scenes/ItemButtonControl.cs" />
-    <Compile Include="Assets/Scenes/TCPClient.cs" />
     <Compile Include="Assets/Scenes/KZ_TestMenu.cs" />
     <Compile Include="Assets/Scenes/BackButtonControl.cs" />
     <Compile Include="Assets/Scenes/TouchHandler.cs" />
@@ -67,7 +66,6 @@
     <Compile Include="Assets/Scenes/DebugControl.cs" />
     <Compile Include="Assets/Scenes/LaunchButtonControl.cs" />
     <Compile Include="Assets/Scenes/TestModeCanvasControl.cs" />
-    <Compile Include="Assets/Scenes/TCPTestClient.cs" />
     <Compile Include="Assets/Scenes/ToggleButton.cs" />
     <Compile Include="Assets/Scenes/ValueSlider.cs" />
   </ItemGroup>
