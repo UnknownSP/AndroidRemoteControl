@@ -1,7 +1,0 @@
-<linker>
-	<assembly fullname="Unity.RenderStreaming.Sample" ignoreIfMissing="1">
-		<type fullname="Unity.RenderStreaming.Samples.BackButton">
-			<method name="BackButtonPressed"/>
-		</type>
-	</assembly>
-</linker>
